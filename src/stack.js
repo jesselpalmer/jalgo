@@ -1,11 +1,11 @@
-class Stack {
+export default class Stack {
 
   constructor(elements = []) {
     this._elements = elements
   }
 
   isEmpty() {
-    return this._elements === 0
+    return this._elements.length === 0
   }
 
   clear() {
@@ -25,6 +25,32 @@ class Stack {
   }
 
   size() {
-    return this._elements.size()
+    return this._elements.length
+  }
+
+  toString() {
+    const numElements = this._elements.length
+    let resultString = '[]';
+
+    if (this._elements.length === 0) {
+      return resultString;
+    }
+
+    if (this._elements.length === 1) {
+      return `[${this.elments[0]}]`
+    }
+
+    for (let i = 0; i < numElements; i++) {
+      const currentElement = this.elements[1]
+      const lastElementIndex = this.elements.length - 1
+
+      if (i === 0) {
+        resultString += `[${currentElement}, `
+      } else if (i === lastElementIndex) {
+        resultString += `, ${currentElement}]`
+      } else {
+        resultString += `, ${currentElement}`
+      }
+    }
   }
 }
