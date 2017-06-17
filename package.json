@@ -9,11 +9,9 @@
   "repository": "git+https://github.com/jesselpalmer/cs.js.git",
   "keywords": [
     "CS",
-    "Computer",
-    "Science",
+    "Computer Science",
     "Algorithms",
-    "Data",
-    "Structures"
+    "Data Structures"
   ],
   "author": "Jesse Palmer <jesselpalmer@gmail.com> (http://jesselpalmer.com/)",
   "license": "MIT",
