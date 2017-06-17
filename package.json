@@ -23,6 +23,11 @@
   "homepage": "https://github.com/jesselpalmer/cs.js#readme",
   "devDependencies": {
     "babel-cli": "6.24.1",
-    "babel-preset-env": "1.5.2"
+    "babel-preset-env": "1.5.2",
+    "chai": "^4.0.2",
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
+    "standard": "^10.0.2"
   }
 }
