@@ -1,6 +1,26 @@
 class Stack {
 
-  pop() {}
+  constructor(elements = []) {
+    this._elements = elements
+  }
 
-  push() {}
+  isEmpty() {
+    return this._elements === 0
+  }
+  
+  peek() {
+    return this._elements[0];
+  }
+
+  pop() {
+    return this._elements.splice(0, 1);
+  }
+
+  push(element) {
+    this._elements.push(element)
+  }
+
+  size() {
+    return this._elements.size()
+  }
 }
