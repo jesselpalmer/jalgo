@@ -1,0 +1,6 @@
+class Stack {
+
+  pop() {}
+
+  push() {}
+}
