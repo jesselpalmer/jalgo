@@ -6,7 +6,10 @@
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "babel src -w --out-dir lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*",
+    "lint": "standard src",
+    "lint:fix": "standard --fix",
+    "test": "npm run lint && npm run cover"
   },
   "repository": "git+https://github.com/jesselpalmer/cs.js.git",
   "keywords": [
