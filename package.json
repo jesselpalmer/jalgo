@@ -1,0 +1,27 @@
+{
+  "name": "cs.js",
+  "version": "0.0.1",
+  "description": "CS algorithms and data structures in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesselpalmer/cs.js.git"
+  },
+  "keywords": [
+    "CS",
+    "Computer",
+    "Science",
+    "Algorithms",
+    "Data",
+    "Structures"
+  ],
+  "author": "Jesse Palmer <jesselpalmer@gmail.com> (http://jesselpalmer.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesselpalmer/cs.js/issues"
+  },
+  "homepage": "https://github.com/jesselpalmer/cs.js#readme"
+}
