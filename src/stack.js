@@ -7,13 +7,17 @@ class Stack {
   isEmpty() {
     return this._elements === 0
   }
+
+  clear() {
+    this._elements.length = 0
+  }
   
   peek() {
-    return this._elements[0];
+    return this._elements[0]
   }
 
   pop() {
-    return this._elements.splice(0, 1);
+    return this._elements.splice(0, 1)
   }
 
   push(element) {
