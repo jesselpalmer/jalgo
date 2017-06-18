@@ -17,7 +17,7 @@ export default class Stack {
   }
 
   pop() {
-    return this._elements.splice(0, 1)
+    return this._elements.splice(0, 1)[0]
   }
 
   push(element) {
