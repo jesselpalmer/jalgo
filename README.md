@@ -13,11 +13,11 @@ CS algorithms and data structures in JavaScript
 
 ## Usage
 
-Text that you would like to convert into emojis must be surrounded by colons, like `:smile:`.
+The only data structure that is available right now is `Stack`. Avaiable methods are `clear()`, `isEmpty()`, `peek()`, `push()`, `size()`, `toString()`. More will added in time.
   
   ```js
   // es5
-  const emojify = require('cs.js')
+  const Stack = require('cs.js')
 
   // es6
   import Stack from 'cs.js'
@@ -25,8 +25,6 @@ Text that you would like to convert into emojis must be surrounded by colons, li
   const stack = new Stack()
   stack.isEmpty() // will return true
   ```
-
-The only data structure that is available right now is `Stack`. Avaiable methods are `clear()`, `isEmpty()`, `peek()`, `push()`, `size()`, `toString()`. More will added in time.
 
 ## Tests
 
