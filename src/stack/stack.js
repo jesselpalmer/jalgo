@@ -30,27 +30,29 @@ export default class Stack {
 
   toString() {
     const numElements = this._elements.length
-    let resultString = '[]';
+    let resultString = '';
 
     if (this._elements.length === 0) {
-      return resultString;
+      return '[]';
     }
 
     if (this._elements.length === 1) {
-      return `[${this.elments[0]}]`
+      return `[ ${this._elements[0]} ]`
     }
 
     for (let i = 0; i < numElements; i++) {
-      const currentElement = this.elements[1]
-      const lastElementIndex = this.elements.length - 1
+      const currentElement = this._elements[i]
+      const lastElementIndex = this._elements.length - 1
 
       if (i === 0) {
-        resultString += `[${currentElement}, `
+        resultString += `[ ${currentElement}, `
       } else if (i === lastElementIndex) {
-        resultString += `, ${currentElement}]`
+        resultString += ` ${currentElement} ]`
       } else {
-        resultString += `, ${currentElement}`
+        resultString += `${currentElement},`
       }
     }
+
+    return resultString
   }
 }
