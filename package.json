@@ -1,6 +1,6 @@
 {
   "name": "cs.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CS algorithms and data structures in JavaScript",
   "main": "lib/stack.js",
   "scripts": {
