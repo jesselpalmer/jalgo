@@ -2,7 +2,7 @@
   "name": "cs.js",
   "version": "0.0.2",
   "description": "CS algorithms and data structures in JavaScript",
-  "main": "lib/stack.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "babel src -w --out-dir lib",
@@ -13,10 +13,7 @@
     "test:unit": "NODE_ENV=test mocha './src/**/*.spec.js' --compilers js:babel-register",
     "test:unit:watch": "NODE_ENV=test mocha './src/**/*.spec.js' -w --compilers js:babel-register"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jesselpalmer/cs.js"
-  },
+  "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
     "node": ">=4.2.4"
   },
@@ -43,5 +40,6 @@
   },
   "dependencies": {
     "babel-register": "^6.24.1"
-  }
+  },
+  "private": false
 }
