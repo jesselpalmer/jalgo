@@ -6,8 +6,10 @@
  * Average performance:           O(log n)
  * Worst-case space complexity:   O(1)
  * 
- * @param {*} numList - a sorted list of number
- * @param {*} num - the number that you are looking for
+ * @param {number} numList - a sorted list of numbers
+ * @param {number} num - the number that you are looking for
+ * 
+ * @returns {number} - the index if the number is found or null if the number is not found
  */
 export const binarySearch = (numList, num) => {
   const numLength = numList.length
