@@ -1,10 +1,10 @@
 /**
  * binarySearch
  * ------------
- * Worst-case performance:	     O(log n)
- * Best-case performance: 	     O(1)
- * Average performance:   	     O(log n)
- * Worst-case space complexity:  O(1)
+ * Worst-case performance:        O(log n)
+ * Best-case performance:         O(1)
+ * Average performance:           O(log n)
+ * Worst-case space complexity:   O(1)
  * 
  * @param {*} numList - a sorted list of number
  * @param {*} num - the number that you are looking for
