@@ -1,6 +1,18 @@
+/**
+ * binarySearch
+ * ------------
+ * Worst-case performance:	     O(log n)
+ * Best-case performance: 	     O(1)
+ * Average performance:   	     O(log n)
+ * Worst-case space complexity:  O(1)
+ * 
+ * @param {*} numList - a sorted list of number
+ * @param {*} num - the number that you are looking for
+ */
 export const binarySearch = (numList, num) => {
+  const numLength = numList.length
   let low = 0
-  let high = numList.length - 1
+  let high = numLength - 1
   let guess = null
   let mid = 0
   
