@@ -14,6 +14,7 @@ describe('selectionSort tests', () => {
   it('should sort a list of strings', () => {
     const list = ['stanford', 'berkeley', 'mit', 'cmu']
     const expected = ['berkeley', 'cmu', 'mit', 'stanford']
-    expect(selectionSort(list)).eql(expected)
+    const actual = selectionSort(list)
+    expect(actual).eql(expected)
   })
 })

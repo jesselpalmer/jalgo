@@ -13,7 +13,7 @@ function getLowestElementIndex (list) {
 }
 
 export const selectionSort = list => {
-  let result = new Array()
+  let result = []
 
   while (list.length !== 0) {
     const lowestElementIndex = getLowestElementIndex(list)
