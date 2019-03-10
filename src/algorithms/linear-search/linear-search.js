@@ -7,7 +7,7 @@ export const linearSearch = (list, item) => {
     return 0
   }
   
-  for (let i = 1; i < len.length; i++) {
+  for (let i = 1; i < list.length; i++) {
     const currentItem = list[i]
     
     if (currentItem === item) {
