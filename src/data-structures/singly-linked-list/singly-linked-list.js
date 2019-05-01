@@ -8,7 +8,7 @@ export class SinglyLinkedListNode {
 export class SinglyLinkedList {
   constructor() {
     this.list = null
-    this.size = 0
+    this._size = 0
   }
 
   /**
@@ -21,7 +21,7 @@ export class SinglyLinkedList {
   add(node) {
     if (!this.list) {
       this.list = node
-      this.size++
+      this._size ++
     } else {
       let currentNode = this.list
 
@@ -30,7 +30,7 @@ export class SinglyLinkedList {
       }
 
       currentNode.next = node
-      this.size++
+      this._size++
     }
   }
 
@@ -42,6 +42,16 @@ export class SinglyLinkedList {
   addToEnd(node) {
     add(node)
   }
+
+  /**
+    * size()
+    * ----------
+    * Returns the size of the singly linked list.
+    */
+  get size() {
+    return this._size 
+  }
+  
 
   /**
     * toString()
@@ -64,6 +74,6 @@ export class SinglyLinkedList {
 
   clear() {
     this.list = null
-    this.size = 0
+    this._size = 0
   }
 }
