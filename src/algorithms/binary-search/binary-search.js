@@ -1,6 +1,6 @@
 /**
- * binarySearch
- * ------------
+ * Binary Search
+ * -------------
  * Worst-case performance:        O(log n)
  * Best-case performance:         O(1)
  * Average performance:           O(log n)

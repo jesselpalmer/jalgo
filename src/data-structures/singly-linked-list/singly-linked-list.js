@@ -1,3 +1,8 @@
+/**
+ * Singly Linked List Node
+ * -----------------------
+ * Node to be used with singly linked lists.
+ */
 export class SinglyLinkedListNode {
   constructor(value = null) {
     this.value = value
@@ -5,6 +10,11 @@ export class SinglyLinkedListNode {
   }
 }
 
+/**
+ * Singly Linked List
+ * ------------------
+ * Implementation of a singley linked list.
+ */
 export class SinglyLinkedList {
   constructor() {
     this.list = null
