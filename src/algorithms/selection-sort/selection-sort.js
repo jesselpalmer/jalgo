@@ -10,7 +10,7 @@ export const selectionSort = list => {
   return result
 }
 
-function getLowestElementIndex (list) {
+const getLowestElementIndex = list => {
   let min = list[0]
   let lowestElementIndex = 0
 
