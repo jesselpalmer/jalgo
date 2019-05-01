@@ -12,12 +12,12 @@ export class SinglyLinkedList {
   }
 
   /**
-    * add()
-    * -----
-    * Takes in a node and appends the node to the end of the list.
-    * 
-    * @param {Node} node - an instance of the SinglyLinkedListNode class
-    */
+   * add()
+   * -----
+   * Takes in a node and appends the node to the end of the sinlgly linked list.
+   * 
+   * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
+   */
   add(node) {
     if (!this.list) {
       this.list = node
@@ -35,29 +35,42 @@ export class SinglyLinkedList {
   }
 
   /**
-    * addToEnd()
-    * ----------
-    * Alias for add() method. Adds node to the end of the list.
-    */
+   * addToEnd()
+   * ----------
+   * Alias for add() method. Adds node to the end of the singly linked list.
+   * 
+   * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
+   */
   addToEnd(node) {
     add(node)
   }
 
   /**
-    * size()
-    * ----------
-    * Returns the size of the singly linked list.
-    */
+   * size()
+   * ----------
+   * Returns the size of the singly linked list.
+   * 
+   * @returns {number} - the size of the singly linked list.
+   */
   get size() {
     return this._size 
   }
-  
 
   /**
-    * toString()
-    * ----------
-    * Print out the contents of the list to the console. Good to use for debugging.
-    */
+   * clear()
+   * -------
+   * Clears out the singly linked list.
+   */
+  clear() {
+    this.list = null
+    this._size = 0
+  }
+
+   /**
+   * toString()
+   * ----------
+   * Print out the contents of the singly linked list to the console. Good to use for debugging.
+   */
   toString() {
     if (!this.list) return
 
@@ -70,10 +83,5 @@ export class SinglyLinkedList {
       }
 
     console.log(currentNode)
-  }
-
-  clear() {
-    this.list = null
-    this._size = 0
   }
 }
