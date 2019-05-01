@@ -1,19 +1,4 @@
 /**
- * Singly Linked List Node
- * -----------------------
- * Node to be used with singly linked lists.
- * 
- * @property {any} value - any value to be stored in the node
- * @property {SinglyLinkedListNode} next - reference to the next node
- */
-export class SinglyLinkedListNode {
-  constructor(value = null) {
-    this.value = value
-    this.next = null
-  }
-}
-
-/**
  * Singly Linked List
  * ------------------
  * Implementation of a singley linked list.
@@ -105,3 +90,19 @@ export class SinglyLinkedList {
     console.log(currentNode)
   }
 }
+
+/**
+ * Singly Linked List Node
+ * -----------------------
+ * Node to be used with singly linked lists.
+ * 
+ * @property {any} value - any value to be stored in the node
+ * @property {SinglyLinkedListNode} next - reference to the next node
+ */
+export class SinglyLinkedListNode {
+  constructor(value = null) {
+    this.value = value
+    this.next = null
+  }
+}
+
