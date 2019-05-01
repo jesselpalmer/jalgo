@@ -2,6 +2,9 @@
  * Singly Linked List Node
  * -----------------------
  * Node to be used with singly linked lists.
+ * 
+ * @property {any} value - any value to be stored in the node
+ * @property {SinglyLinkedListNode} next - reference to the next node
  */
 export class SinglyLinkedListNode {
   constructor(value = null) {
@@ -14,6 +17,9 @@ export class SinglyLinkedListNode {
  * Singly Linked List
  * ------------------
  * Implementation of a singley linked list.
+ * 
+ * @property {SinglyLinkedListNode} list - the list starts of as null. The first added sinlgly list node will become the
+ *    parent. All other nodes will be added to the parent as children.
  */
 export class SinglyLinkedList {
   constructor() {
@@ -25,6 +31,8 @@ export class SinglyLinkedList {
    * add()
    * -----
    * Takes in a node and appends the node to the end of the sinlgly linked list.
+   * 
+   * @alias (addToEnd)
    * 
    * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
    */
@@ -47,7 +55,9 @@ export class SinglyLinkedList {
   /**
    * addToEnd()
    * ----------
-   * Alias for add() method. Adds node to the end of the singly linked list.
+   * Adds node to the end of the singly linked list. Alias for add() method.
+   * 
+   * @alias (add)
    * 
    * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
    */
