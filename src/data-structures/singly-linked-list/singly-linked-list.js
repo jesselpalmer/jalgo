@@ -71,7 +71,7 @@ export class SinglyLinkedList {
     this._size = 0
   }
 
-   /**
+  /**
    * toString()
    * ----------
    * Print out the contents of the singly linked list to the console. Good to use for debugging.
