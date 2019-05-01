@@ -1,6 +1,9 @@
 /**
  * Binary Search
  * -------------
+ * The binary search algorithm takes in a sorted array of strings or numbers and finds a value that is passed in
+ * as a parameter.
+ * 
  * Worst-case performance:        O(log n)
  * Best-case performance:         O(1)
  * Average performance:           O(log n)
