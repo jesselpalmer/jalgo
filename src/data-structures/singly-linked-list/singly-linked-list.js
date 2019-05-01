@@ -1,21 +1,23 @@
-class SinglyLinkedListNode {
+export class SinglyLinkedListNode {
   constructor(value = null) {
     this.value = value
     this.next = null
   }
 }
 
-class SinglyLinkedList {
+export class SinglyLinkedList {
   constructor() {
     this.list = null
     this.size = 0
   }
 
   /**
-   * add()
-   * -----
-   * Takes in a node and appends the node to the end of the list.
-   */
+    * add()
+    * -----
+    * Takes in a node and appends the node to the end of the list.
+    * 
+    * @param {Node} node - an instance of the SinglyLinkedListNode class
+    */
   add(node) {
     if (!this.list) {
       this.list = node
@@ -33,19 +35,19 @@ class SinglyLinkedList {
   }
 
   /**
-   * addToEnd()
-   * ----------
-   * Alias for add() method. Adds node to the end of the list.
-   */
+    * addToEnd()
+    * ----------
+    * Alias for add() method. Adds node to the end of the list.
+    */
   addToEnd(node) {
     add(node)
   }
 
   /**
-   * toString()
-   * ----------
-   * Print out the contents of the list to the console. Good to use for debugging.
-   */
+    * toString()
+    * ----------
+    * Print out the contents of the list to the console. Good to use for debugging.
+    */
   toString() {
     if (!this.list) return
 
