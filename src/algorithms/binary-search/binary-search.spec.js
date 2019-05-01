@@ -15,7 +15,7 @@ describe('Binary Search tests', () => {
   })
 
   it('should return index if an array of different data types exists', () => {
-    const testArray = [-42324, "b", null, undefined]
+    const testArray = [-42324, 'b', null, undefined]
     expect(binarySearch(testArray, null)).to.be.equal(2)
   })
 
