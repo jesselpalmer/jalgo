@@ -3,7 +3,7 @@
 import { expect } from 'chai'
 import { euclideanAlgorithm } from './euclidean-algorithm'
 
-describe('euclideanAlgorithm tests', () => {
+describe('Euclidean Algorithm tests', () => {
   it('should return the corerect greates common denominator', () => {
     expect(euclideanAlgorithm(125, 625)).to.be.equal(125)
   })

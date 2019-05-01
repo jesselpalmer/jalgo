@@ -3,8 +3,8 @@
 import { expect } from 'chai'
 import Stack from './stack'
 
-describe('Stack class', () => {
-  describe('clear() method', () => {
+describe('Stack tests', () => {
+  describe('clear() tests', () => {
     it('should clear an array with elements', () => {
       const stack = new Stack()
       stack.push('stanford')
@@ -16,7 +16,7 @@ describe('Stack class', () => {
     })
   })
 
-  describe('isEmpty() method', () => {
+  describe('isEmpty() tests', () => {
     it('should return true if empty', () => {
       const stack = new Stack()
       expect(stack.isEmpty()).to.be.true
@@ -35,7 +35,7 @@ describe('Stack class', () => {
     })
   })
 
-  describe('peek() method', () => {
+  describe('peek() tests', () => {
     it('should return the only element', () => {
       const stack = new Stack()
       stack.push('hopper')
@@ -51,7 +51,7 @@ describe('Stack class', () => {
     })
   })
 
-  describe('pop() method', () => {
+  describe('pop() tests', () => {
     it('should return the first element', () => {
       const stack = new Stack()
       stack.push('babbage')
@@ -79,7 +79,7 @@ describe('Stack class', () => {
     })
   })
 
-  describe('size() method', () => {
+  describe('size() tests', () => {
     it('should return the correct size', () => {
       const stack = new Stack()
       stack.push(4)
@@ -87,7 +87,7 @@ describe('Stack class', () => {
     })
   })
 
-  describe('toString() method', () => {
+  describe('toString() tests', () => {
     it('should return [] when stack is empty', () => {
       const stack = new Stack()
       expect(stack.toString()).to.be.equal('[]')

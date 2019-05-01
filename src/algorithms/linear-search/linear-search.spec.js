@@ -3,7 +3,7 @@
 import { expect } from 'chai'
 import { linearSearch } from './linear-search'
 
-describe('linearSearch tests', () => {
+describe('Linear Search tests', () => {
   it('should return the corerect index of the element if it is contained in the list', () => {
     const list = [-121, 0, 1, 2, 3, 4, 5, 1000, 9999]
     const element = 3
