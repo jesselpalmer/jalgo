@@ -7,9 +7,9 @@
  * Worst-case space complexity:   O(1)
  * 
  * @param {array<values>} valuesArray - a sorted array of values
- * @param {any} value - the value that you are looking for
+ * @param {string | number} value - the value that is being search for in the valuesArray.
  * 
- * @returns {any} - the index if the value is found or -1 if the value is not found
+ * @returns {number} - the index if the value is found or -1 if the value is not found
  */
 export const binarySearch = (valuesArray, value) => {
   const valuesLength = valuesArray.length
