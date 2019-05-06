@@ -1,3 +1,3 @@
-import Stack from './stack'
+import { SinglyLinkedList, SinglyLinkedListNode, Stack } from './data-structures'
 
-export default { Stack }
+export { SinglyLinkedList, SinglyLinkedListNode, Stack }

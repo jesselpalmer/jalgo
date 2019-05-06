@@ -6,7 +6,7 @@
  * @property {SinglyLinkedListNode} list - the list starts of as null. The first added sinlgly list node will become the
  *    parent. All other nodes will be added to the parent as children.
  */
-export class SinglyLinkedList {
+export default class SinglyLinkedList {
   constructor() {
     this.list = null
     this._size = 0
@@ -57,7 +57,7 @@ export class SinglyLinkedList {
    * 
    * @returns {number} - the size of the singly linked list.
    */
-  get size() {
+  size() {
     return this._size 
   }
 
@@ -90,19 +90,3 @@ export class SinglyLinkedList {
     console.log(currentNode)
   }
 }
-
-/**
- * Singly Linked List Node
- * -----------------------
- * Node to be used with singly linked lists.
- * 
- * @property {any} value - any value to be stored in the node
- * @property {SinglyLinkedListNode} next - reference to the next node
- */
-export class SinglyLinkedListNode {
-  constructor(value = null) {
-    this.value = value
-    this.next = null
-  }
-}
-

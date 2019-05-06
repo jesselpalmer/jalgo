@@ -1,8 +1,8 @@
 /* eslint-env mocha */
 
 import { expect } from 'chai'
-import { SinglyLinkedList } from './singly-linked-list'
-import { SinglyLinkedListNode } from './singly-linked-list'
+import SinglyLinkedList from './singly-linked-list'
+import SinglyLinkedListNode from './singly-linked-list-node'
 
 describe('Singly Linked List tests', () => {
   describe('clear() tests', () => {
@@ -16,9 +16,9 @@ describe('Singly Linked List tests', () => {
       singlyLinkedList.add(singlyListNode2)
       singlyLinkedList.add(singlyListNode3)
      
-      expect(singlyLinkedList.size).to.be.equal(3)
+      expect(singlyLinkedList.size()).to.be.equal(3)
       singlyLinkedList.clear()
-      expect(singlyLinkedList.size).to.be.equal(0)
+      expect(singlyLinkedList.size()).to.be.equal(0)
     })
   })
 
@@ -33,9 +33,9 @@ describe('Singly Linked List tests', () => {
       singlyLinkedList.add(singlyListNode2)
       singlyLinkedList.add(singlyListNode3)
      
-      expect(singlyLinkedList.size).to.be.equal(3)
+      expect(singlyLinkedList.size()).to.be.equal(3)
       singlyLinkedList.clear()
-      expect(singlyLinkedList.size).to.be.equal(0)
+      expect(singlyLinkedList.size()).to.be.equal(0)
     })
   })
 })
