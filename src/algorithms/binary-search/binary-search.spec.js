@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'chai'
-import { binarySearch } from './binary-search'
+import binarySearch from './binary-search'
 
 describe('Binary Search tests', () => {
   it('should find an element if it exists and is a number', () => {

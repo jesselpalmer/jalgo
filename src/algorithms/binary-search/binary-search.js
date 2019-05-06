@@ -14,7 +14,7 @@
  * 
  * @returns {number} - the index if the value is found or -1 if the value is not found
  */
-export const binarySearch = (valuesArray, value) => {
+const binarySearch = (valuesArray, value) => {
   const valuesLength = valuesArray.length
   let low = 0
   let high = valuesLength - 1
@@ -40,3 +40,5 @@ export const binarySearch = (valuesArray, value) => {
   
   return -1
 }
+
+export default binarySearch

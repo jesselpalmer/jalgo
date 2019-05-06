@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'chai'
-import { selectionSort } from './selection-sort'
+import selectionSort from './selection-sort'
 
 describe('Selection Sort tests', () => {
   it('should sort a list of numbers', () => {

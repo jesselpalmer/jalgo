@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'chai'
-import { linearSearch } from './linear-search'
+import linearSearch from './linear-search'
 
 describe('Linear Search tests', () => {
   it('should return the corerect index of the element if it is contained in the list', () => {

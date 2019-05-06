@@ -11,7 +11,7 @@
  * @param {number} num1 - first number to be used
  * @param {number} num2 - second number to be used
  */
-export const euclideanAlgorithm = (num1, num2) => {
+const euclideanAlgorithm = (num1, num2) => {
   const lowNum = Math.min(num1, num2)
 
   for (let i = lowNum; i >= 1; i--) {
@@ -22,3 +22,5 @@ export const euclideanAlgorithm = (num1, num2) => {
 
   return -1
 }
+
+export default euclideanAlgorithm

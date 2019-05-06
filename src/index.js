@@ -1,3 +1,10 @@
+import { binarySearch, euclideanAlgorithm, linearSearch, selectionSort } from './algorithms'
 import { SinglyLinkedList, SinglyLinkedListNode, Stack } from './data-structures'
 
-export { SinglyLinkedList, SinglyLinkedListNode, Stack }
+export { binarySearch, 
+          euclideanAlgorithm,
+          linearSearch,
+          selectionSort,
+          SinglyLinkedList,
+          SinglyLinkedListNode, 
+          Stack }

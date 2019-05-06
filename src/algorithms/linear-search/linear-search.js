@@ -14,7 +14,7 @@
  * 
  * @returns number - The index of the element if it is found in the list. -1 is returned if element isn't found.
  */
-export const linearSearch = (list, element) => {
+const linearSearch = (list, element) => {
   for (let i = 0; i < list.length; i++) {
     const currentElement = list[i]
     
@@ -25,3 +25,5 @@ export const linearSearch = (list, element) => {
   
   return -1
 }
+
+export default linearSearch

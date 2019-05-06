@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'chai'
-import { euclideanAlgorithm } from './euclidean-algorithm'
+import euclideanAlgorithm from './euclidean-algorithm'
 
 describe('Euclidean Algorithm tests', () => {
   it('should return the corerect greatest common denominator', () => {

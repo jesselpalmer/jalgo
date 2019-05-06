@@ -1,4 +1,4 @@
-export const selectionSort = list => {
+const selectionSort = list => {
   let result = []
 
   while (list.length !== 0) {
@@ -23,3 +23,5 @@ const getLowestElementIndex = list => {
 
   return lowestElementIndex
 }
+
+export default selectionSort
