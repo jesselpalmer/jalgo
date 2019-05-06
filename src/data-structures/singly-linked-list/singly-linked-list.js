@@ -50,6 +50,37 @@ export default class SinglyLinkedList {
     add(node)
   }
 
+  get(index) {
+    if (index > this._size) return null
+
+    let currentNode = this.list
+    let currentIndex = 0
+
+    while(currentIndex !== index) {
+      currentNode = currentNode.next
+      currentIndex++
+    }
+
+    return currentNode
+  }
+
+  getFirst() {
+    return this.list
+  }
+
+  getLast() {
+    let currentNode = this.list
+    
+    if (!currentNode.next) return currentNode
+
+    while(currentNode.next !== null) {
+      currentNode = currentNode.next
+      currentIndex++
+    }
+
+    return currentNode
+  }
+
   /**
    * size()
    * ----------
