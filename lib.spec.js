@@ -10,7 +10,7 @@ describe('library tests', function () {
       stack.push('mega man')
 
       chai.expect(stack.size()).equal(1)
-    });
+    })
   })
   
   describe('SinglyLinkedList test', function () {
@@ -24,6 +24,6 @@ describe('library tests', function () {
       singlyLinkedList.add(singlyLinkedListNode)
 
       chai.expect(singlyLinkedList.size()).equal(1)
-    });
+    })
   })
-});
+})
