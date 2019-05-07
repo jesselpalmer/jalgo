@@ -38,4 +38,67 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.size()).to.be.equal(0)
     })
   })
+
+  describe('get() tests', () => {
+    it('should get first value', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode1 = new SinglyLinkedListNode(1999)
+      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode3 = new SinglyLinkedListNode(true)
+
+      singlyLinkedList.add(singlyListNode1)
+      singlyLinkedList.add(singlyListNode2)
+      singlyLinkedList.add(singlyListNode3)
+
+      expect(singlyLinkedList.get(0)).to.be.equal(1999)
+    })
+
+    it('should return null if there are no nodes in the singly linked list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      
+      expect(singlyLinkedList.get()).to.be.null
+    })
+  })
+
+  describe('getFirst() tests', () => {
+    it('should get first value', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode1 = new SinglyLinkedListNode(1999)
+      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode3 = new SinglyLinkedListNode(true)
+
+      singlyLinkedList.add(singlyListNode1)
+      singlyLinkedList.add(singlyListNode2)
+      singlyLinkedList.add(singlyListNode3)
+
+      expect(singlyLinkedList.getFirst()).to.be.equal(1999)
+    })
+
+    it('should return null if there are no nodes in the singly linked list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      
+      expect(singlyLinkedList.getFirst()).to.be.null
+    })
+  })
+
+  describe('getLast() tests', () => {
+    it('should get last value', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode1 = new SinglyLinkedListNode(1999)
+      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode3 = new SinglyLinkedListNode(true)
+
+      singlyLinkedList.add(singlyListNode1)
+      singlyLinkedList.add(singlyListNode2)
+      singlyLinkedList.add(singlyListNode3)
+
+      expect(singlyLinkedList.getLast()).to.be.equal(true)
+    })
+
+    it('should return null if there are no nodes in the singly linked list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      
+      expect(singlyLinkedList.getLast()).to.be.null
+    })
+  })
 })

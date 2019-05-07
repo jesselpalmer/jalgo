@@ -50,7 +50,15 @@ export default class SinglyLinkedList {
     add(node)
   }
 
-  get(index) {
+   /**
+   * get()
+   * -----
+   * Gets a value using the passed in index. If no index is passed into as a paramenter the first element will be selected.
+   * 
+   * @param {index} number - the index that will be used to select an element.
+   */
+  get(index = 0) {
+    if (!this.list) return null
     if (index > this._size) return null
 
     let currentNode = this.list
@@ -61,24 +69,25 @@ export default class SinglyLinkedList {
       currentIndex++
     }
 
-    return currentNode
+    return currentNode.value
   }
 
+  /**
+   * getFirst()
+   * -----
+   * Gets the first value of the list.
+   */
   getFirst() {
-    return this.list
+    return this.get()
   }
 
+  /**
+   * getLast()
+   * -----
+   * Gets the last value of the list.
+   */
   getLast() {
-    let currentNode = this.list
-    
-    if (!currentNode.next) return currentNode
-
-    while(currentNode.next !== null) {
-      currentNode = currentNode.next
-      currentIndex++
-    }
-
-    return currentNode
+    return this.get(this._size - 1)
   }
 
   /**
