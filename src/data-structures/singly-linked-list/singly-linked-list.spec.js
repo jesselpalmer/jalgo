@@ -2,7 +2,7 @@
 
 import { expect } from 'chai'
 import SinglyLinkedList from './singly-linked-list'
-import SinglyLinkedListNode from './singly-linked-list-node'
+import SinglyLinkedListNode from './singly-linked-list-node'    
 
 describe('Singly Linked List tests', () => {
   describe('clear() tests', () => {
