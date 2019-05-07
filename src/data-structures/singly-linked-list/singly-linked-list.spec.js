@@ -53,6 +53,19 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.get(0)).to.be.equal(1999)
     })
 
+    it('should retun the first value if no index is passed in', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode1 = new SinglyLinkedListNode(1999)
+      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode3 = new SinglyLinkedListNode(true)
+
+      singlyLinkedList.add(singlyListNode1)
+      singlyLinkedList.add(singlyListNode2)
+      singlyLinkedList.add(singlyListNode3)
+
+      expect(singlyLinkedList.get()).to.be.equal(1999)
+    })
+
     it('should return null if there are no nodes in the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList()
       
