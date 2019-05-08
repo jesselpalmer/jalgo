@@ -9,7 +9,7 @@ describe('Euclidean Algorithm tests', () => {
   })
 
   it('should return -1 if their are no common denominators', () => {
-    expect(euclideanAlgorithm(0, 123)).to.be.equal(-1)
+    expect(euclideanAlgorithm(5, 123)).to.be.equal(-1)
   })
 
   it('should return -1 if only one parameter is passed in', () => {
