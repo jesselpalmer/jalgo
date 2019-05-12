@@ -87,6 +87,22 @@ describe('Stack tests', () => {
     })
   })
 
+  describe('search() tests', () => {
+    it('should return index an element if the element exists', () => {
+      const stack = new Stack()
+      stack.push(1906)
+      stack.push(1815)
+      expect(stack.search(1815)).to.be.equal(1)
+    })
+
+    it('should return -1 if an index can not be found', () => {
+      const stack = new Stack()
+      stack.push(1906)
+      stack.push(1815)
+      expect(stack.search(1938)).to.be.equal(-1)
+    })
+  })
+
   describe('toString() tests', () => {
     it('should return [] when stack is empty', () => {
       const stack = new Stack()

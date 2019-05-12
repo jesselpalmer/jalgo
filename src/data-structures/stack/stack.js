@@ -27,6 +27,10 @@ export default class Stack {
     return this._elements.length
   }
 
+  search (element) {
+    return this._elements.indexOf(element)
+  }
+
   toString () {
     const numElements = this._elements.length
     let resultString = ''
