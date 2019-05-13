@@ -1,5 +1,6 @@
+import Queue from './queue'
 import { SinglyLinkedList } from './singly-linked-list'
 import { SinglyLinkedListNode } from './singly-linked-list'
 import Stack from './stack'
 
-export { SinglyLinkedList, SinglyLinkedListNode, Stack }
+export { Queue, SinglyLinkedList, SinglyLinkedListNode, Stack }
