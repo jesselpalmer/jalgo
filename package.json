@@ -10,6 +10,7 @@
     "lint": "standard src",
     "lint:fix": "standard --fix",
     "test": "npm run lint && npm run cover",
+    "test:library": "NODE_ENV=test mocha 'lib.spec.js' --compilers js:babel-register",
     "test:unit": "NODE_ENV=test mocha './src/**/*.spec.js' --compilers js:babel-register",
     "test:unit:watch": "NODE_ENV=test mocha './src/**/*.spec.js' -w --compilers js:babel-register",
     "test:unit:watch:lib": "NODE_ENV=test mocha './lib.spec.js' -w --compilers js:babel-register"
