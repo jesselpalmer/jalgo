@@ -7,6 +7,10 @@ export default class Queue {
     this._elements.push(element)
   }
 
+  dequeue () {
+    return this._elements.pop()
+  }
+
   back () {
     const lastElementIndex = this._elements.length - 1
     return this._elements[lastElementIndex]

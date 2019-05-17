@@ -13,6 +13,17 @@ describe('Queue tests', () => {
       expect(queue.size()).to.be.equal(3)
     })
   })
+
+  describe('dequeue() tests', () => {
+    it('should add values to the queue', () => {
+      const queue = new Queue()
+      queue.enqueue('wheatley')
+      queue.enqueue('glados')
+      queue.enqueue('cave johnson')
+      expect(queue.dequeue()).to.be.equal('cave johnson')
+      expect(queue.size()).to.be.equal(2)
+    })
+  })
   
   describe('back() tests', () => {
     it('should return the last value in the queue', () => {
