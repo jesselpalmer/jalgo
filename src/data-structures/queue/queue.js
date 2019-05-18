@@ -16,6 +16,10 @@ export default class Queue {
     return this._elements[lastElementIndex]
   }
 
+  clear () {
+    this._elements = []
+  }
+
   size () {
     return this._elements.length
   }

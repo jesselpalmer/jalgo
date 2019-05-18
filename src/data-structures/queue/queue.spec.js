@@ -43,4 +43,15 @@ describe('Queue tests', () => {
       expect(queue.size()).to.be.equal(2)
     })
   })
+
+  describe('clear() tests', () => {
+    it('should remove all of the elements from the queue', () => {
+      const queue = new Queue()
+      queue.enqueue('wheatley')
+      queue.enqueue('glados')
+      queue.enqueue('cave johnson')
+      queue.clear()
+      expect(queue.size()).to.be.equal(0)
+    })
+  })
 })
