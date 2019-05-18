@@ -3,14 +3,6 @@ export default class Queue {
     this._elements = elements
   }
 
-  enqueue (element) {
-    this._elements.push(element)
-  }
-
-  dequeue () {
-    return this._elements.pop()
-  }
-
   back () {
     const lastElementIndex = this._elements.length - 1
     return this._elements[lastElementIndex]
@@ -18,6 +10,18 @@ export default class Queue {
 
   clear () {
     this._elements = []
+  }
+
+  dequeue () {
+    return this._elements.pop()
+  }
+
+  enqueue (element) {
+    this._elements.push(element)
+  }
+
+  isEmpty () {
+    return this._elements.length === 0
   }
 
   size () {
