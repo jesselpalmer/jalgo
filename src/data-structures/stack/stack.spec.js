@@ -19,19 +19,19 @@ describe('Stack tests', () => {
   describe('isEmpty() tests', () => {
     it('should return true if empty', () => {
       const stack = new Stack()
-      expect(stack.isEmpty()).to.be.true
+      expect(stack.isEmpty()).to.be.true()
     })
 
     it('should return false if not empty', () => {
       const testArray = [1, 2, 3]
       const stack = new Stack(testArray)
-      expect(stack.isEmpty()).to.be.false
+      expect(stack.isEmpty()).to.be.false()
     })
 
     it('should return false if empty array is passed to it', () => {
       const testArray = []
       const stack = new Stack(testArray)
-      expect(stack.isEmpty()).to.be.true
+      expect(stack.isEmpty()).to.be.true()
     })
   })
 

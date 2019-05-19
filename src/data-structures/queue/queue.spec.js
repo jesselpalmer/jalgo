@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import { expect } from 'chai'
-import Queue  from './queue'
+import Queue from './queue'
 
 describe('Queue tests', () => {
   describe('back() tests', () => {
@@ -50,7 +50,7 @@ describe('Queue tests', () => {
     it('should be true if there are no elements', () => {
       const queue = new Queue()
       queue.isEmpty()
-      expect(queue.isEmpty()).to.be.true
+      expect(queue.isEmpty()).to.be.true()
     })
   })
 

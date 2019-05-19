@@ -2,7 +2,7 @@
 
 import { expect } from 'chai'
 import SinglyLinkedList from './singly-linked-list'
-import SinglyLinkedListNode from './singly-linked-list-node'    
+import SinglyLinkedListNode from './singly-linked-list-node'
 
 describe('Singly Linked List tests', () => {
   describe('clear() tests', () => {
@@ -11,11 +11,11 @@ describe('Singly Linked List tests', () => {
       const singlyListNode1 = new SinglyLinkedListNode(-134)
       const singlyListNode2 = new SinglyLinkedListNode(1337.19)
       const singlyListNode3 = new SinglyLinkedListNode('andrew ryan')
-      
+
       singlyLinkedList.add(singlyListNode1)
       singlyLinkedList.add(singlyListNode2)
       singlyLinkedList.add(singlyListNode3)
-     
+
       expect(singlyLinkedList.size()).to.be.equal(3)
       singlyLinkedList.clear()
       expect(singlyLinkedList.size()).to.be.equal(0)
@@ -26,13 +26,13 @@ describe('Singly Linked List tests', () => {
     it('should return the correct size', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(500000000)
-      const singlyListNode2 = new SinglyLinkedListNode({place: 'rapture'})
+      const singlyListNode2 = new SinglyLinkedListNode({ place: 'rapture' })
       const singlyListNode3 = new SinglyLinkedListNode(false)
 
       singlyLinkedList.add(singlyListNode1)
       singlyLinkedList.add(singlyListNode2)
       singlyLinkedList.add(singlyListNode3)
-     
+
       expect(singlyLinkedList.size()).to.be.equal(3)
       singlyLinkedList.clear()
       expect(singlyLinkedList.size()).to.be.equal(0)
@@ -43,7 +43,7 @@ describe('Singly Linked List tests', () => {
     it('should get first value', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(1999)
-      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode2 = new SinglyLinkedListNode({ place: 'mineravas den' })
       const singlyListNode3 = new SinglyLinkedListNode(true)
 
       singlyLinkedList.add(singlyListNode1)
@@ -56,20 +56,20 @@ describe('Singly Linked List tests', () => {
     it('should return null the index is larger that the size of the list', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(1999)
-      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode2 = new SinglyLinkedListNode({ place: 'mineravas den' })
       const singlyListNode3 = new SinglyLinkedListNode(true)
 
       singlyLinkedList.add(singlyListNode1)
       singlyLinkedList.add(singlyListNode2)
       singlyLinkedList.add(singlyListNode3)
 
-      expect(singlyLinkedList.get(4)).to.be.null
+      expect(singlyLinkedList.get(4)).to.be.null()
     })
 
     it('should retun the first value if no index is passed in', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(1999)
-      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode2 = new SinglyLinkedListNode({ place: 'mineravas den' })
       const singlyListNode3 = new SinglyLinkedListNode(true)
 
       singlyLinkedList.add(singlyListNode1)
@@ -81,8 +81,8 @@ describe('Singly Linked List tests', () => {
 
     it('should return null if there are no nodes in the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList()
-      
-      expect(singlyLinkedList.get()).to.be.null
+
+      expect(singlyLinkedList.get()).to.be.equal(null)
     })
   })
 
@@ -90,7 +90,7 @@ describe('Singly Linked List tests', () => {
     it('should get first value', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(1999)
-      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode2 = new SinglyLinkedListNode({ place: 'mineravas den' })
       const singlyListNode3 = new SinglyLinkedListNode(true)
 
       singlyLinkedList.add(singlyListNode1)
@@ -102,8 +102,8 @@ describe('Singly Linked List tests', () => {
 
     it('should return null if there are no nodes in the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList()
-      
-      expect(singlyLinkedList.getFirst()).to.be.null
+
+      expect(singlyLinkedList.getFirst()).to.be.equal(null)
     })
   })
 
@@ -111,7 +111,7 @@ describe('Singly Linked List tests', () => {
     it('should get last value', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(1999)
-      const singlyListNode2 = new SinglyLinkedListNode({place: 'mineravas den'})
+      const singlyListNode2 = new SinglyLinkedListNode({ place: 'mineravas den' })
       const singlyListNode3 = new SinglyLinkedListNode(true)
 
       singlyLinkedList.add(singlyListNode1)
@@ -123,8 +123,8 @@ describe('Singly Linked List tests', () => {
 
     it('should return null if there are no nodes in the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList()
-      
-      expect(singlyLinkedList.getLast()).to.be.null
+
+      expect(singlyLinkedList.getLast()).to.be.equal(null)
     })
   })
 })

@@ -10,7 +10,7 @@ describe('Binary Search tests', () => {
   })
 
   it('should return index if an element exists and is a string', () => {
-    const testArray = ['apple','facebook','google','netflix']
+    const testArray = ['apple', 'facebook', 'google', 'netflix']
     expect(binarySearch(testArray, 'google')).to.be.equal(2)
   })
 

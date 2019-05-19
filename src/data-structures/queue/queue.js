@@ -1,5 +1,5 @@
 export default class Queue {
-  constructor(elements = []) {
+  constructor (elements = []) {
     this._elements = elements
   }
 
