@@ -8,7 +8,7 @@ class Node {
 
 class BinaryTree {
   constructor(root = null) {
-    this.root
+    this.root = root
   }
 
   insert(node) {
