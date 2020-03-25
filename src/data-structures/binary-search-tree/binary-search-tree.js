@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class BinaryTree {
+class BinarySearchTree {
   constructor(value) {
     const node = new Node(value)
     this.root = node
