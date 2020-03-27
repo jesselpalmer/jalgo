@@ -1,23 +1,23 @@
 class Node {
-  constructor(value, left = null, right = null) {
+  constructor (value, left = null, right = null) {
     this.value = value
     this.left = left
     this.right = right
   }
 }
 
-class BinarySearchTree {
-  constructor(value) {
+export default class BinarySearchTree {
+  constructor (value) {
     const node = new Node(value)
     this.root = node
   }
 
-  insert(value) {
+  insert (value) {
     const node = new Node(value)
     this._appendNode(this.root, node)
   }
 
-  _appendNode(node, newNode) {
+  _appendNode (node, newNode) {
     if (node.value > newNode.value) {
       if (node.left === null) {
         node.left = newNode
@@ -35,13 +35,13 @@ class BinarySearchTree {
     }
   }
 
-  printInOrder() {
+  printInOrder () {
     this._walkTree(this.root)
   }
 
-  _printInOrder(node) {
+  _printInOrder (node) {
     if (node === null) return
-    
+
     this._printInOrder(node.left)
     console.log(node.value)
     this._printInOrder(node.right)
