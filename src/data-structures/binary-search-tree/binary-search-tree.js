@@ -34,4 +34,16 @@ class BinarySearchTree {
       this._appendNode(node.right, newNode)
     }
   }
+
+  printInOrder() {
+    this._walkTree(this.root)
+  }
+
+  _printInOrder(node) {
+    if (node === null) return
+    
+    this._printInOrder(node.left)
+    console.log(node.value)
+    this._printInOrder(node.right)
+  }
 }
