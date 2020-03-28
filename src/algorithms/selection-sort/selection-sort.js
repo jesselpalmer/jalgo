@@ -1,5 +1,5 @@
 const selectionSort = list => {
-  let result = []
+  const result = []
 
   while (list.length !== 0) {
     const lowestElementIndex = getLowestElementIndex(list)
