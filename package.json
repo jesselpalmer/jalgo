@@ -20,9 +20,10 @@
     "node": ">=4.2.4"
   },
   "keywords": [
-    "CS",
-    "Computer Science",
     "Algorithms",
+    "CS",
+    "CS Algoorithms",
+    "Computer Science",
     "Data Structures"
   ],
   "author": "Jesse Palmer <jesselpalmer@gmail.com> (http://jesselpalmer.com/)",
