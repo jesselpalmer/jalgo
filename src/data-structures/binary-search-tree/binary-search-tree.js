@@ -36,7 +36,7 @@ export default class BinarySearchTree {
   }
 
   printInOrder () {
-    this._walkTree(this.root)
+    this._printInOrder(this.root)
   }
 
   _printInOrder (node) {
