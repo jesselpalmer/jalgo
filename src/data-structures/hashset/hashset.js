@@ -1,5 +1,7 @@
 class HashSet {
-  values = {}
+  constructor() {
+    this.values = {}
+  }
 
   add(val) {
     this.values[val] = true
