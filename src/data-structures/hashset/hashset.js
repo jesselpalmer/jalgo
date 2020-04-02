@@ -1,4 +1,4 @@
-class HashSet {
+export default class HashSet {
   constructor() {
     this.values = {}
   }
