@@ -1,21 +1,21 @@
 export default class HashSet {
-  constructor() {
+  constructor () {
     this.values = {}
   }
 
-  add(val) {
+  add (val) {
     this.values[val] = true
   }
 
-  has(val) {
+  has (val) {
     return this.values[val] === true
   }
 
-  remove(val) {
+  remove (val) {
     delete this.values[val]
   }
 
-  getValues() {
+  getValues () {
     return Object.keys(this.values)
   }
 }
