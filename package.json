@@ -10,10 +10,10 @@
     "lint": "./node_modules/.bin/standard",
     "lint:fix": "./node_modules/.bin/standard --fix",
     "test": "npm run lint && npm run cover",
-    "test:unit": "mocha './src/**/*.spec.js' --require @babel/register",
-    "test:unit:watch": "mocha './src/**/*.spec.js' -w --require @babel/register",
-    "test:unit:lib": "mocha './lib.spec.js' --require @babel/register",
-    "test:unit:lib:watch": "mocha './lib.spec.js' -w --require @babel/register"
+    "test:unit": "./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
+    "test:unit:watch": "./node_modules/.bin/mocha './src/**/*.spec.js' -w --require @babel/register",
+    "test:unit:lib": "./node_modules/.bin/mocha './lib.spec.js' --require @babel/register",
+    "test:unit:lib:watch": "./node_modules/.bin/mocha './lib.spec.js' -w --require @babel/register"
   },
   "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
