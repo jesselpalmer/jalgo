@@ -4,6 +4,14 @@ import { expect } from 'chai'
 import HashSet from './hashset'
 
 describe('HashSet tests', () => {
+  describe('add() tests', () => {
+    it('should add an element correctly', () => {
+      const hashSet = new HashSet()
+      hashSet.add(35)
+      expect(hashSet.has(35)).equal(true)
+    })
+  })
+
   describe('has() tests', () => {
     it('should be true if hashset contains value', () => {
       const hashSet = new HashSet()
