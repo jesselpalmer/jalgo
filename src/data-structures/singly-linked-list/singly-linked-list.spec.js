@@ -53,7 +53,7 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.get(0)).to.be.equal(1999)
     })
 
-    it('should return null the index is larger that the size of the list', () => {
+    it('should return null if the index is larger that the size of the list', () => {
       const singlyLinkedList = new SinglyLinkedList()
       const singlyListNode1 = new SinglyLinkedListNode(1999)
       const singlyListNode2 = new SinglyLinkedListNode({ place: 'mineravas den' })
@@ -63,7 +63,7 @@ describe('Singly Linked List tests', () => {
       singlyLinkedList.add(singlyListNode2)
       singlyLinkedList.add(singlyListNode3)
 
-      expect(singlyLinkedList.get(4)).to.be.null()
+      expect(singlyLinkedList.get(4)).to.be.equal(null)
     })
 
     it('should retun the first value if no index is passed in', () => {

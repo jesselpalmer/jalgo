@@ -7,7 +7,7 @@ describe('HashSet tests', () => {
   describe('smoke test', () => {
     it('should successfully create instance', () => {
       const hashSet = new HashSet()
-      expect(hashSet).not.to.be.null()
+      expect(hashSet).not.equal(null)
     })
   })
 })
