@@ -10,10 +10,10 @@
     "lint": "./node_modules/.bin/standard",
     "lint:fix": "./node_modules/.bin/standard --fix",
     "test": "npm run lint && npm run cover",
-    "test:library": "NODE_ENV=test mocha 'lib.spec.js' --compilers js:babel-register",
-    "test:unit": "NODE_ENV=test mocha './src/**/*.spec.js' --compilers js:babel-register",
-    "test:unit:watch": "NODE_ENV=test mocha './src/**/*.spec.js' -w --compilers js:babel-register",
-    "test:unit:watch:lib": "NODE_ENV=test mocha './lib.spec.js' -w --compilers js:babel-register"
+    "test:unit": "mocha './src/**/*.spec.js' --require @babel/register",
+    "test:unit:watch": "mocha './src/**/*.spec.js' -w --require @babel/register",
+    "test:unit:lib": "mocha './lib.spec.js' --require @babel/register",
+    "test:unit:lib:watch": "mocha './lib.spec.js' -w --require @babel/register"
   },
   "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
@@ -33,9 +33,10 @@
   },
   "homepage": "https://github.com/jesselpalmer/cs.js#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.24.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.3",
     "istanbul": "^0.4.5",
