@@ -7,7 +7,7 @@
  * @property {SinglyLinkedListNode} next - reference to the next node
  */
 export default class SinglyLinkedListNode {
-  constructor (value = null) {
+  constructor(value = null) {
     this.value = value
     this.next = null
   }

@@ -1,30 +1,30 @@
 export default class Queue {
-  constructor (elements = []) {
+  constructor(elements = []) {
     this._elements = elements
   }
 
-  back () {
+  back() {
     const lastElementIndex = this._elements.length - 1
     return this._elements[lastElementIndex]
   }
 
-  clear () {
+  clear() {
     this._elements = []
   }
 
-  dequeue () {
+  dequeue() {
     return this._elements.pop()
   }
 
-  enqueue (element) {
+  enqueue(element) {
     this._elements.push(element)
   }
 
-  isEmpty () {
+  isEmpty() {
     return this._elements.length === 0
   }
 
-  size () {
+  size() {
     return this._elements.length
   }
 }

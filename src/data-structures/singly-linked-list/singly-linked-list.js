@@ -7,7 +7,7 @@
  *    parent. All other nodes will be added to the parent as children.
  */
 export default class SinglyLinkedList {
-  constructor () {
+  constructor() {
     this.list = null
     this._size = 0
   }
@@ -21,7 +21,7 @@ export default class SinglyLinkedList {
    *
    * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
    */
-  add (node) {
+  add(node) {
     if (!this.list) {
       this.list = node
       this._size++
@@ -46,7 +46,7 @@ export default class SinglyLinkedList {
    *
    * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
    */
-  addToEnd (node) {
+  addToEnd(node) {
     this.add(node)
   }
 
@@ -57,7 +57,7 @@ export default class SinglyLinkedList {
    *
    * @param {index} number - the index that will be used to select an element.
    */
-  get (index = 0) {
+  get(index = 0) {
     if (!this.list) return null
     if (index > this._size) return null
 
@@ -77,7 +77,7 @@ export default class SinglyLinkedList {
    * -----
    * Gets the first value of the list.
    */
-  getFirst () {
+  getFirst() {
     return this.get()
   }
 
@@ -86,7 +86,7 @@ export default class SinglyLinkedList {
    * -----
    * Gets the last value of the list.
    */
-  getLast () {
+  getLast() {
     return this.get(this._size - 1)
   }
 
@@ -97,7 +97,7 @@ export default class SinglyLinkedList {
    *
    * @returns {number} - the size of the singly linked list.
    */
-  size () {
+  size() {
     return this._size
   }
 
@@ -106,7 +106,7 @@ export default class SinglyLinkedList {
    * -------
    * Clears out the singly linked list.
    */
-  clear () {
+  clear() {
     this.list = null
     this._size = 0
   }
@@ -116,7 +116,7 @@ export default class SinglyLinkedList {
    * ----------
    * Print out the contents of the singly linked list to the console. Good to use for debugging.
    */
-  toString () {
+  toString() {
     if (!this.list) return
 
     let currentNode = this.list
