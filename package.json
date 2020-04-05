@@ -47,5 +47,8 @@
     "jsdoc": "^3.6.2",
     "mocha": "^7.1.1"
   },
+  "optionalDependencies": {
+    "fsevents": "2.1.2"
+  },
   "private": false
 }
