@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./node_modules/.bin/babel src -d lib",
     "build:watch": "./node_modules/.bin/babel src -w --out-dir lib",
-    "cover": "./node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec lib/**/*.spec.js",
+    "cover": "./node_modules/.bin/nyc node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint --fix ./src",
     "test": "npm run lint && npm run cover",
@@ -43,9 +43,9 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "istanbul": "^0.4.5",
     "jsdoc": "^3.6.2",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1"
   },
   "optionalDependencies": {
     "fsevents": "2.1.2"
