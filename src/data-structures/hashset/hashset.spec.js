@@ -24,4 +24,14 @@ describe('HashSet tests', () => {
       expect(hashSet.has(5)).equal(false)
     })
   })
+
+  describe('size() tests', () => {
+    it('should return the correct number of elements', () => {
+      const hashSet = new HashSet()
+      hashSet.add(10)
+      hashSet.add(11)
+      hashSet.add(999)
+      expect(hashSet.size()).equal(3)
+    })
+  })
 })

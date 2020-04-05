@@ -15,7 +15,7 @@ export default class HashSet {
     delete this.values[val]
   }
 
-  getValues() {
-    return Object.keys(this.values)
+  size() {
+    return this.getValues().length
   }
 }
