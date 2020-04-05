@@ -12,6 +12,17 @@ describe('HashSet tests', () => {
     })
   })
 
+  describe('clear() tests', () => {
+    it('should clear out all the elements', () => {
+      const hashSet = new HashSet()
+      hashSet.add(10)
+      hashSet.add(11)
+      hashSet.add(999)
+      hashSet.clear()
+      expect(hashSet.size()).equal(0)
+    })
+  })
+
   describe('has() tests', () => {
     it('should be true if hashset contains value', () => {
       const hashSet = new HashSet()

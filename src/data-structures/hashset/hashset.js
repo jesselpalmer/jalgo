@@ -7,6 +7,10 @@ export default class HashSet {
     this.values[val] = true
   }
 
+  clear() {
+    this.values = {}
+  }
+
   has(val) {
     return this.values[val] === true
   }
