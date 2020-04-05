@@ -15,6 +15,10 @@ export default class HashSet {
     return this.values[val] === true
   }
 
+  getValues() {
+    return Object.keys(this.values)
+  }
+
   remove(val) {
     delete this.values[val]
   }
