@@ -4,8 +4,8 @@
   "description": "CS algorithms and data structures in JavaScript",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d lib",
-    "build:watch": "./node_modules/.bin/babel src -w --out-dir lib",
+    "build": "./node_modules/.bin/babel ./src -d lib",
+    "build:watch": "./node_modules/.bin/babel ./src -w --out-dir lib",
     "coverage": "codecov",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint --fix ./src",
