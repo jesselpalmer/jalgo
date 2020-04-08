@@ -32,30 +32,6 @@ export default class Stack {
   }
 
   toString() {
-    const numElements = this._elements.length
-    let resultString = ''
-
-    if (this._elements.length === 0) {
-      return '[]'
-    }
-
-    if (this._elements.length === 1) {
-      return `[ ${this._elements[0]} ]`
-    }
-
-    for (let i = 0; i < numElements; i++) {
-      const currentElement = this._elements[i]
-      const lastElementIndex = this._elements.length - 1
-
-      if (i === 0) {
-        resultString += `[ ${currentElement}, `
-      } else if (i === lastElementIndex) {
-        resultString += ` ${currentElement} ]`
-      } else {
-        resultString += `${currentElement},`
-      }
-    }
-
-    return resultString
+    return this._elements.toString()
   }
 }

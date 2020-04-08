@@ -104,15 +104,15 @@ describe('Stack tests', () => {
   })
 
   describe('toString() tests', () => {
-    it('should return [] when stack is empty', () => {
+    it('should return \'\' when stack is empty', () => {
       const stack = new Stack()
-      expect(stack.toString()).to.be.equal('[]')
+      expect(stack.toString()).to.be.equal('')
     })
 
     it('should return correct string when there one element', () => {
       const stack = new Stack()
       stack.push(1)
-      expect(stack.toString()).to.be.equal('[ 1 ]')
+      expect(stack.toString()).to.be.equal('1')
     })
 
     it('should return correct string when there are multiple elements', () => {
@@ -120,7 +120,7 @@ describe('Stack tests', () => {
       stack.push(1)
       stack.push(2)
       stack.push(3)
-      expect(stack.toString()).to.be.equal('[ 1, 2, 3 ]')
+      expect(stack.toString()).to.be.equal('1,2,3')
     })
   })
 })
