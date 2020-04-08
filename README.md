@@ -15,7 +15,7 @@ CS algorithms and data structures in JavaScript
 
 The only data structure that is available right now is `Stack`. Avaiable methods are `clear()`, `isEmpty()`, `peek()`, `push()`, `size()`, `toString()`. More will added in time.
   
-  ```js
+  ```javascript
   // es5
   const Stack = require('cs.js')
 
