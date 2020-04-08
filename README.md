@@ -1,4 +1,4 @@
-[![cs.js action](https://github.com/jesselpalmer/cs.js/workflows/cs.js%20action/badge.svg)](https://github.com/jesselpalmer/cs.js/workflows/cs.js%20action/)
+![cs.js action](https://github.com/jesselpalmer/cs.js/workflows/cs.js%20action/badge.svg)
 [![codecov](https://codecov.io/gh/jesselpalmer/cs.js/branch/master/graph/badge.svg)](https://codecov.io/gh/jesselpalmer/cs.js)
 
 # cs.js
