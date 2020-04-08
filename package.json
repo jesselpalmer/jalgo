@@ -10,10 +10,10 @@
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint --fix ./src",
     "test": "./node_modules/.bin/nyc --reporter=lcov ./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
-    "test:unit": "./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
-    "test:unit:watch": "./node_modules/.bin/mocha './src/**/*.spec.js' -w --require @babel/register",
-    "test:unit:lib": "./node_modules/.bin/mocha './lib.spec.js' --require @babel/register",
-    "test:unit:lib:watch": "./node_modules/.bin/mocha './lib.spec.js' -w --require @babel/register"
+    "test:unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
+    "test:unit:watch": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './src/**/*.spec.js' -w --require @babel/register",
+    "test:unit:lib": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './lib.spec.js' --require @babel/register",
+    "test:unit:lib:watch": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './lib.spec.js' -w --require @babel/register"
   },
   "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
