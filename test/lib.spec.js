@@ -1,5 +1,5 @@
 var chai = require('chai')
-var csjs = require('./lib')
+var csjs = require('../lib')
 
 describe('Library tests', function () {
   describe('Data Structures tests', function () {
