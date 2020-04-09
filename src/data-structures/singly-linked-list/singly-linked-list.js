@@ -50,6 +50,17 @@ export default class SinglyLinkedList {
     this.add(node)
   }
 
+  contains(value) {
+    let currentNode = this.list
+
+    while (currentNode) {
+      if (currentNode.value === value) return true
+      currentNode = currentNode.next
+    }
+
+    return false
+  }
+
   /**
    * get()
    * -----

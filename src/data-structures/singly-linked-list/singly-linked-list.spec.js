@@ -127,4 +127,30 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.getLast()).to.be.equal(null)
     })
   })
+
+  describe('add() tests', () => {
+    it('should add new element in list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode = new SinglyLinkedListNode(1917)
+      singlyLinkedList.add(singlyListNode)
+      expect(singlyLinkedList.contains(1917)).to.be.equal(true)
+    })
+  })
+
+  describe('contains() tests', () => {
+    it('should return true if value has been added to list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode = new SinglyLinkedListNode(2000)
+      expect(singlyLinkedList.contains(2000)).to.be.equal(false)
+      singlyLinkedList.add(singlyListNode)
+      expect(singlyLinkedList.contains(2000)).to.be.equal(true)
+    })
+
+    it('should return false if value is not in the list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+      const singlyListNode = new SinglyLinkedListNode(2000)
+      singlyLinkedList.add(singlyListNode)
+      expect(singlyLinkedList.contains(2020)).to.be.equal(false)
+    })
+  })
 })
