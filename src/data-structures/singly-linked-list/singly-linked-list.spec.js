@@ -110,6 +110,7 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList()
 
       singlyLinkedList.add(1917)
+      
       expect(singlyLinkedList.contains(1917)).to.be.equal(true)
     })
   })
@@ -119,7 +120,9 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList()
 
       expect(singlyLinkedList.contains(2000)).to.be.equal(false)
+
       singlyLinkedList.add(2000)
+
       expect(singlyLinkedList.contains(2000)).to.be.equal(true)
     })
 
@@ -127,6 +130,7 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList()
 
       singlyLinkedList.add(2000)
+
       expect(singlyLinkedList.contains(2020)).to.be.equal(false)
     })
   })
