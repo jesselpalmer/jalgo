@@ -48,9 +48,11 @@ export default class SinglyLinkedList {
    *
    * @alias (add)
    *
-   * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
+   * @param {value} any - any value to be appeneded to the end of the singly linked list.
    */
-  addToEnd(node) {
+  addToEnd(value) {
+    const node = new SinglyLinkedListNode(value)
+
     this.add(node)
   }
 
