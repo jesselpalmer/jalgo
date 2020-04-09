@@ -17,7 +17,7 @@ export default class SinglyLinkedList {
   /**
    * add()
    * -----
-   * Takes in a value and appends a node to the end of the sinlgly linked list.
+   * Adds a node to the end of the singly linked list.
    *
    * @alias (addToEnd)
    *
@@ -44,7 +44,7 @@ export default class SinglyLinkedList {
   /**
    * addToEnd()
    * ----------
-   * Adds node to the end of the singly linked list. Alias for add() method.
+   * Adds a node to the end of the singly linked list. Alias for add() method.
    *
    * @alias (add)
    *
