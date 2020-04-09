@@ -1,3 +1,5 @@
+import SinglyLinkedListNode from './singly-linked-list-node'
+
 /**
  * Singly Linked List
  * ------------------
@@ -15,13 +17,15 @@ export default class SinglyLinkedList {
   /**
    * add()
    * -----
-   * Takes in a node and appends the node to the end of the sinlgly linked list.
+   * Takes in a value and appends a node to the end of the sinlgly linked list.
    *
    * @alias (addToEnd)
    *
-   * @param {SinglyLinkedListNode} node - an instance of the SinglyLinkedListNode class
+   * @param {value} any - any value to be appeneded to the end of the singly linked list.
    */
-  add(node) {
+  add(value) {
+    const node = new SinglyLinkedListNode(value)
+
     if (!this.list) {
       this.list = node
       this._size++
