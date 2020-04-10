@@ -53,6 +53,19 @@ describe('Queue tests', () => {
     })
   })
 
+  describe('peek()', () => {
+    it('should return the first element', () => {
+      const queue = new Queue()
+      queue.enqueue('chell')
+      expect(queue.peek()).to.be.equal('chell')
+    })
+
+    it('should return null if element doesn\'t exist', () => {
+      const queue = new Queue()
+      expect(queue.peek()).to.be.equal(null)
+    })
+  })
+
   describe('size() tests', () => {
     it('should return the correct size', () => {
       const queue = new Queue()

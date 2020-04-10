@@ -24,6 +24,11 @@ export default class Queue {
     return this._elements.length === 0
   }
 
+  peek() {
+    if (this.isEmpty()) return null
+    return this._elements[0]
+  }
+
   size() {
     return this._elements.length
   }
