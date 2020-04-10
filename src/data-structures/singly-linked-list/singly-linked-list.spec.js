@@ -4,6 +4,16 @@ import { expect } from 'chai'
 import SinglyLinkedList from './singly-linked-list'
 
 describe('Singly Linked List tests', () => {
+  describe('add() tests', () => {
+    it('should add new element in list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+
+      singlyLinkedList.add(1917)
+      
+      expect(singlyLinkedList.contains(1917)).to.be.equal(true)
+    })
+  })
+
   describe('clear() tests', () => {
     it('should clear the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList()
@@ -18,17 +28,23 @@ describe('Singly Linked List tests', () => {
     })
   })
 
-  describe('size() tests', () => {
-    it('should return the correct size', () => {
+  describe('contains() tests', () => {
+    it('should return true if value has been added to list', () => {
       const singlyLinkedList = new SinglyLinkedList()
 
-      singlyLinkedList.add(500000000)
-      singlyLinkedList.add({ place: 'rapture' })
-      singlyLinkedList.add(false)
+      expect(singlyLinkedList.contains(2000)).to.be.equal(false)
 
-      expect(singlyLinkedList.size()).to.be.equal(3)
-      singlyLinkedList.clear()
-      expect(singlyLinkedList.size()).to.be.equal(0)
+      singlyLinkedList.add(2000)
+
+      expect(singlyLinkedList.contains(2000)).to.be.equal(true)
+    })
+
+    it('should return false if value is not in the list', () => {
+      const singlyLinkedList = new SinglyLinkedList()
+
+      singlyLinkedList.add(2000)
+
+      expect(singlyLinkedList.contains(2020)).to.be.equal(false)
     })
   })
 
@@ -105,33 +121,17 @@ describe('Singly Linked List tests', () => {
     })
   })
 
-  describe('add() tests', () => {
-    it('should add new element in list', () => {
+  describe('size() tests', () => {
+    it('should return the correct size', () => {
       const singlyLinkedList = new SinglyLinkedList()
 
-      singlyLinkedList.add(1917)
-      
-      expect(singlyLinkedList.contains(1917)).to.be.equal(true)
-    })
-  })
+      singlyLinkedList.add(500000000)
+      singlyLinkedList.add({ place: 'rapture' })
+      singlyLinkedList.add(false)
 
-  describe('contains() tests', () => {
-    it('should return true if value has been added to list', () => {
-      const singlyLinkedList = new SinglyLinkedList()
-
-      expect(singlyLinkedList.contains(2000)).to.be.equal(false)
-
-      singlyLinkedList.add(2000)
-
-      expect(singlyLinkedList.contains(2000)).to.be.equal(true)
-    })
-
-    it('should return false if value is not in the list', () => {
-      const singlyLinkedList = new SinglyLinkedList()
-
-      singlyLinkedList.add(2000)
-
-      expect(singlyLinkedList.contains(2020)).to.be.equal(false)
+      expect(singlyLinkedList.size()).to.be.equal(3)
+      singlyLinkedList.clear()
+      expect(singlyLinkedList.size()).to.be.equal(0)
     })
   })
 })
