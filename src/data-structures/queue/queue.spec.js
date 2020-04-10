@@ -65,7 +65,7 @@ describe('Queue tests', () => {
       expect(queue.peek()).to.be.equal('chell')
     })
 
-    it('should return null if element doesn\'t exist', () => {
+    it('should return null if queue is empty', () => {
       const queue = new Queue()
       expect(queue.peek()).to.be.equal(null)
     })
