@@ -4,7 +4,7 @@ export default class Stack {
   }
 
   clear() {
-    this._elements.length = 0
+    this._elements = []
   }
 
   isEmpty() {
