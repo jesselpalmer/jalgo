@@ -4,6 +4,7 @@ export default class Queue {
   }
 
   back() {
+    if (this.isEmpty()) return null
     const lastElementIndex = this._elements.length - 1
     return this._elements[lastElementIndex]
   }

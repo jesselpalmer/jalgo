@@ -12,6 +12,11 @@ describe('Queue tests', () => {
       queue.enqueue('glados')
       expect(queue.back()).to.be.equal('glados')
     })
+
+    it('should return null if queue is empty', () => {
+      const queue = new Queue()
+      expect(queue.back()).to.be.equal(null)
+    })
   })
 
   describe('clear() tests', () => {
