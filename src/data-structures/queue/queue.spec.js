@@ -49,7 +49,6 @@ describe('Queue tests', () => {
   describe('isEmpty()', () => {
     it('should be true if there are no elements', () => {
       const queue = new Queue()
-      queue.isEmpty()
       expect(queue.isEmpty()).to.be.equal(true)
     })
   })
