@@ -46,4 +46,21 @@ export default class BinarySearchTree {
     console.log(node.value)
     this._printInOrder(node.right)
   }
+
+  contains(value) {
+    return this._contains(this.root, value)
+  }
+
+  _contains(node, value) {
+    if (node === null) return false
+    if (node.value === value) return true
+    
+    if (node.value > value) {
+      return this._contains(node.left, value)
+    }
+
+    if (node.value < value) {
+      return this.contains(node.right)
+    }
+  }
 }
