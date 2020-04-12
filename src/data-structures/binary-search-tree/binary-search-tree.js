@@ -60,7 +60,7 @@ export default class BinarySearchTree {
     }
 
     if (node.value < value) {
-      return this.contains(node.right)
+      return this._contains(node.right, value)
     }
   }
 }

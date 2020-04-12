@@ -13,11 +13,15 @@ describe('BinarySearchTree tests', () => {
 
   describe('contains() test', () => {
     it('should return true if tree contains value', () => {
-      const binarySearchTree = new BinarySearchTree(2020)
-      binarySearchTree.insert(1981)
+      const binarySearchTree = new BinarySearchTree(1982)
       binarySearchTree.insert(1955)
-      binarySearchTree.insert(1814)
+      binarySearchTree.insert(1999)
+      binarySearchTree.insert('a')
+      binarySearchTree.insert(false)
+      binarySearchTree.insert(-12345)
       expect(binarySearchTree.contains(1955)).to.equal(true)
+      expect(binarySearchTree.contains(1999)).to.equal(true)
+      expect(binarySearchTree.contains(-12345)).to.equal(true)
     })
   })
 })
