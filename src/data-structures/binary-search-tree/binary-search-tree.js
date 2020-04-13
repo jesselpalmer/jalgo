@@ -1,19 +1,13 @@
-class Node {
-  constructor(value, left = null, right = null) {
-    this.value = value
-    this.left = left
-    this.right = right
-  }
-}
+import BinarySearchTreeNode from './binary-search-tree-node'
 
 export default class BinarySearchTree {
   constructor(value) {
-    const node = new Node(value)
+    const node = new BinarySearchTreeNode(value)
     this.root = node
   }
 
   insert(value) {
-    const node = new Node(value)
+    const node = new BinarySearchTreeNode(value)
     this._appendNode(this.root, node)
   }
 
