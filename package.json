@@ -44,7 +44,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "jsdoc": "^3.6.2",
-    "mocha": "^7.1.1",
+    "mocha": "^8.0.1",
     "nyc": "^15.0.1"
   },
   "optionalDependencies": {
