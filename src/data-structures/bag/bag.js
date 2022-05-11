@@ -1,5 +1,3 @@
-import {re} from "@babel/core/lib/vendor/import-meta-resolve";
-
 export default class Bag {
   #elements = [];
 
