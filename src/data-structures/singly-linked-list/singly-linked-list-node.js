@@ -8,7 +8,7 @@
  */
 export default class SinglyLinkedListNode {
   constructor(value = null) {
-    this.value = value
-    this.next = null
+    this.value = value;
+    this.next = null;
   }
 }

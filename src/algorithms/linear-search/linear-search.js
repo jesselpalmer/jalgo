@@ -12,18 +12,18 @@
  * @param {number[]} list - The list of elements that will be searched.
  * @param {number} element  - The element that will be searched for inside the list.
  *
- * @returns number - The index of the element if it is found in the list. -1 is returned if element isn't found.
+ * @return number - The index of the element if it is found in the list. -1 is returned if element isn't found.
  */
 const linearSearch = (list, element) => {
   for (let i = 0; i < list.length; i++) {
-    const currentElement = list[i]
+    const currentElement = list[i];
 
     if (currentElement === element) {
-      return i
+      return i;
     }
   }
 
-  return -1
-}
+  return -1;
+};
 
-export default linearSearch
+export default linearSearch;

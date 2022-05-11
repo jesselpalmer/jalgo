@@ -17,6 +17,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "require-jsdoc" : 0,
     "space-before-function-paren": ["error", "never"]
   }
 }

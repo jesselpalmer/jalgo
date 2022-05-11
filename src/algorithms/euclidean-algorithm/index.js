@@ -1,3 +1,3 @@
-import euclideanAlgorithm from './euclidean-algorithm'
+import euclideanAlgorithm from './euclidean-algorithm';
 
-export default euclideanAlgorithm
+export default euclideanAlgorithm;

@@ -1,3 +1,3 @@
-import selectionSort from './selection-sort'
+import selectionSort from './selection-sort';
 
-export default selectionSort
+export default selectionSort;

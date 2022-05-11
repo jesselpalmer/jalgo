@@ -1,3 +1,3 @@
-import linearSearch from './linear-search'
+import linearSearch from './linear-search';
 
-export default linearSearch
+export default linearSearch;

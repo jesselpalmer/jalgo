@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
-import Bag from "./bag";
-import {expect} from "chai";
+import Bag from './bag';
+import {expect} from 'chai';
 
 describe('Bag tests', () => {
   describe('add() tests', () => {
@@ -11,7 +11,7 @@ describe('Bag tests', () => {
       bag.add(1917);
 
       expect(bag.size()).to.be.equal(1);
-    })
+    });
   });
 
   describe('count() tests', () => {

@@ -1,4 +1,4 @@
-import SinglyLinkedListNode from './singly-linked-list-node'
+import SinglyLinkedListNode from './singly-linked-list-node';
 
 /**
  * Singly Linked List
@@ -10,8 +10,8 @@ import SinglyLinkedListNode from './singly-linked-list-node'
  */
 export default class SinglyLinkedList {
   constructor() {
-    this.list = null
-    this._size = 0
+    this.list = null;
+    this._size = 0;
   }
 
   /**
@@ -24,20 +24,20 @@ export default class SinglyLinkedList {
    * @param {value} any - any value to be appended to the end of the singly linked list.
    */
   add(value) {
-    const node = new SinglyLinkedListNode(value)
+    const node = new SinglyLinkedListNode(value);
 
     if (!this.list) {
-      this.list = node
-      this._size++
+      this.list = node;
+      this._size++;
     } else {
-      let currentNode = this.list
+      let currentNode = this.list;
 
       while (currentNode.next !== null) {
-        currentNode = currentNode.next
+        currentNode = currentNode.next;
       }
 
-      currentNode.next = node
-      this._size++
+      currentNode.next = node;
+      this._size++;
     }
   }
 
@@ -51,20 +51,20 @@ export default class SinglyLinkedList {
    * @param {value} any - any value to be appeneded to the end of the singly linked list.
    */
   addToEnd(value) {
-    const node = new SinglyLinkedListNode(value)
+    const node = new SinglyLinkedListNode(value);
 
-    this.add(node)
+    this.add(node);
   }
 
   contains(value) {
-    let currentNode = this.list
+    let currentNode = this.list;
 
     while (currentNode) {
-      if (currentNode.value === value) return true
-      currentNode = currentNode.next
+      if (currentNode.value === value) return true;
+      currentNode = currentNode.next;
     }
 
-    return false
+    return false;
   }
 
   /**
@@ -75,18 +75,18 @@ export default class SinglyLinkedList {
    * @param {index} number - the index that will be used to select an element.
    */
   get(index = 0) {
-    if (!this.list) return null
-    if (index > this._size) return null
+    if (!this.list) return null;
+    if (index > this._size) return null;
 
-    let currentNode = this.list
-    let currentIndex = 0
+    let currentNode = this.list;
+    let currentIndex = 0;
 
     while (currentIndex !== index) {
-      currentNode = currentNode.next
-      currentIndex++
+      currentNode = currentNode.next;
+      currentIndex++;
     }
 
-    return currentNode.value
+    return currentNode.value;
   }
 
   /**
@@ -95,7 +95,7 @@ export default class SinglyLinkedList {
    * Gets the first value of the list.
    */
   getFirst() {
-    return this.get()
+    return this.get();
   }
 
   /**
@@ -104,7 +104,7 @@ export default class SinglyLinkedList {
    * Gets the last value of the list.
    */
   getLast() {
-    return this.get(this._size - 1)
+    return this.get(this._size - 1);
   }
 
   /**
@@ -112,10 +112,10 @@ export default class SinglyLinkedList {
    * ----------
    * Returns the size of the singly linked list.
    *
-   * @returns {number} - the size of the singly linked list.
+   * @return {number} - the size of the singly linked list.
    */
   size() {
-    return this._size
+    return this._size;
   }
 
   /**
@@ -124,8 +124,8 @@ export default class SinglyLinkedList {
    * Clears out the singly linked list.
    */
   clear() {
-    this.list = null
-    this._size = 0
+    this.list = null;
+    this._size = 0;
   }
 
   /**
@@ -134,16 +134,16 @@ export default class SinglyLinkedList {
    * Print out the contents of the singly linked list to the console. Good to use for debugging.
    */
   toString() {
-    if (!this.list) return
+    if (!this.list) return;
 
-    let currentNode = this.list
+    let currentNode = this.list;
 
     while (currentNode.next !== null) {
-      console.log(currentNode)
-      console.log('\n')
-      currentNode = currentNode.next
+      console.log(currentNode);
+      console.log('\n');
+      currentNode = currentNode.next;
     }
 
-    console.log(currentNode)
+    console.log(currentNode);
   }
 }

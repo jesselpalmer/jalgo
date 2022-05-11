@@ -1,3 +1,3 @@
-import binrarySearch from './binary-search'
+import binrarySearch from './binary-search';
 
-export default binrarySearch
+export default binrarySearch;
