@@ -1,3 +1,5 @@
+import {re} from "@babel/core/lib/vendor/import-meta-resolve";
+
 export default class Bag {
   #elements = [];
 
@@ -11,5 +13,9 @@ export default class Bag {
 
   size() {
     return this.#elements.length;
+  }
+
+  count(element) {
+    return this.#elements.filter(currentElement => currentElement === element).length;
   }
 }
