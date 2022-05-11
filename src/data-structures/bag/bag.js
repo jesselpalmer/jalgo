@@ -14,6 +14,7 @@ export default class Bag {
   }
 
   count(element) {
-    return this.#elements.filter((currentElement) => currentElement === element).length;
+    return this.#elements
+        .filter((currentElement) => currentElement === element).length;
   }
 }

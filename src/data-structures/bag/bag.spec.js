@@ -25,5 +25,11 @@ describe('Bag tests', () => {
       bag.add(1917);
       expect(bag.count(1917)).to.be.equal(2);
     });
+
+    it('should return 0 if nothing has been added', () => {
+      const bag = new Bag();
+
+      expect(bag.count()).to.be.equal(0);
+    });
   });
 });
