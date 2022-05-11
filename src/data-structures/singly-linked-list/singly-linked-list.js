@@ -21,7 +21,7 @@ export default class SinglyLinkedList {
    *
    * @alias (addToEnd)
    *
-   * @param {value} any - any value to be appeneded to the end of the singly linked list.
+   * @param {value} any - any value to be appended to the end of the singly linked list.
    */
   add(value) {
     const node = new SinglyLinkedListNode(value)
