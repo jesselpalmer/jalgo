@@ -3,9 +3,9 @@ import SinglyLinkedListNode from './singly-linked-list-node';
 /**
  * Singly Linked List
  * ------------------
- * Implementation of a singley linked list.
+ * Implementation of a single linked list.
  *
- * @property {SinglyLinkedListNode} list - the list starts of as null. The first added sinlgly list node will become the
+ * @property {SinglyLinkedListNode} list - the list starts of as null. The first added singly list node will become the
  *    parent. All other nodes will be added to the parent as children.
  */
 export default class SinglyLinkedList {
@@ -21,7 +21,10 @@ export default class SinglyLinkedList {
    *
    * @alias (addToEnd)
    *
-   * @param {value} any - any value to be appended to the end of the singly linked list.
+   * @param {value} any - any value to be appended to the end of the singly
+   * linked list.
+   *
+   * @return none
    */
   add(value) {
     const node = new SinglyLinkedListNode(value);
@@ -48,7 +51,7 @@ export default class SinglyLinkedList {
    *
    * @alias (add)
    *
-   * @param {value} any - any value to be appeneded to the end of the singly linked list.
+   * @param {value} any - any value to be appended to the end of the singly linked list.
    */
   addToEnd(value) {
     const node = new SinglyLinkedListNode(value);
