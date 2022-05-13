@@ -9,12 +9,16 @@ export default class Bag {
     this.#elements.push(element);
   }
 
-  size() {
-    return this.#elements.length;
+  contains(element) {
+    return this.#elements.includes(element);
   }
 
   count(element) {
     return this.#elements
         .filter((currentElement) => currentElement === element).length;
+  }
+
+  size() {
+    return this.#elements.length;
   }
 }

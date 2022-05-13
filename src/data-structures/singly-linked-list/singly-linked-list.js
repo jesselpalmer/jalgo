@@ -9,10 +9,10 @@ import SinglyLinkedListNode from './singly-linked-list-node';
  *    parent. All other nodes will be added to the parent as children.
  */
 export default class SinglyLinkedList {
-  constructor() {
-    this.list = null;
-    this._size = 0;
-  }
+  #list = null;
+  #size = 0;
+  #head = null;
+  #tail = null;
 
   /**
    * add()
@@ -29,18 +29,20 @@ export default class SinglyLinkedList {
   add(value) {
     const node = new SinglyLinkedListNode(value);
 
-    if (!this.list) {
-      this.list = node;
-      this._size++;
+    if (!this.#list) {
+      this.#list = node;
+      this.#size++;
+      this.#head = null;
+      this.#tail = null;
     } else {
-      let currentNode = this.list;
+      let currentNode = this.#list;
 
       while (currentNode.next !== null) {
         currentNode = currentNode.next;
       }
 
       currentNode.next = node;
-      this._size++;
+      this.#size++;
     }
   }
 
@@ -60,7 +62,7 @@ export default class SinglyLinkedList {
   }
 
   contains(value) {
-    let currentNode = this.list;
+    let currentNode = this.#list;
 
     while (currentNode) {
       if (currentNode.value === value) return true;
@@ -78,10 +80,10 @@ export default class SinglyLinkedList {
    * @param {index} number - the index that will be used to select an element.
    */
   get(index = 0) {
-    if (!this.list) return null;
-    if (index > this._size) return null;
+    if (!this.#list) return null;
+    if (index > this.#size) return null;
 
-    let currentNode = this.list;
+    let currentNode = this.#list;
     let currentIndex = 0;
 
     while (currentIndex !== index) {
@@ -107,7 +109,7 @@ export default class SinglyLinkedList {
    * Gets the last value of the list.
    */
   getLast() {
-    return this.get(this._size - 1);
+    return this.get(this.#size - 1);
   }
 
   /**
@@ -118,7 +120,7 @@ export default class SinglyLinkedList {
    * @return {number} - the size of the singly linked list.
    */
   size() {
-    return this._size;
+    return this.#size;
   }
 
   /**
@@ -127,8 +129,8 @@ export default class SinglyLinkedList {
    * Clears out the singly linked list.
    */
   clear() {
-    this.list = null;
-    this._size = 0;
+    this.#list = null;
+    this.#size = 0;
   }
 
   /**
@@ -137,9 +139,9 @@ export default class SinglyLinkedList {
    * Print out the contents of the singly linked list to the console. Good to use for debugging.
    */
   toString() {
-    if (!this.list) return;
+    if (!this.#list) return;
 
-    let currentNode = this.list;
+    let currentNode = this.#list;
 
     while (currentNode.next !== null) {
       console.log(currentNode);
