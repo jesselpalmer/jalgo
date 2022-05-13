@@ -1,24 +1,28 @@
-export default class Bag {
-  #elements = [];
+import {SinglyLinkedList} from '../../../lib/data-structures/singly-linked-list';
 
-  constructor(elements = []) {
-    this.#elements = elements;
-  }
+export default class Bag {
+  #elements = new SinglyLinkedList();
+  #counts = {};
 
   add(element) {
-    this.#elements.push(element);
+    this.#elements.add(element);
+
+    if (this.#counts[element]) {
+      this.#counts[element] += 1;
+    } else {
+      this.#counts[element] = 1;
+    }
   }
 
   contains(element) {
-    return this.#elements.includes(element);
+    return this.#elements.contains(element);
   }
 
   count(element) {
-    return this.#elements
-        .filter((currentElement) => currentElement === element).length;
+    return this.#counts[element] ?? 0;
   }
 
   size() {
-    return this.#elements.length;
+    return this.#elements.size();
   }
 }
