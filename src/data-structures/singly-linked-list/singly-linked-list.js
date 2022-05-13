@@ -125,6 +125,8 @@ export default class SinglyLinkedList {
    */
   clear() {
     this.#list = null;
+    this.#head = null;
+    this.#tail = null;
     this.#size = 0;
   }
 
