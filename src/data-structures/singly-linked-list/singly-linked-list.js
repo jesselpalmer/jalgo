@@ -35,15 +35,25 @@ export default class SinglyLinkedList {
       this.#head = node;
       this.#tail = node;
     } else {
-      let currentNode = this.#list;
-
-      while (currentNode.next !== null) {
-        currentNode = currentNode.next;
-      }
-
-      currentNode.next = node;
+      this.#tail.next = node;
+      this.#tail = node;
       this.#size++;
     }
+  }
+
+  /**
+   * addToEnd()
+   * ----------
+   * Adds a node to the end of the singly linked list. Alias for add() method.
+   *
+   * @alias (add)
+   *
+   * @param {value} any - any value to be appended to the end of the singly linked list.
+   */
+  addToEnd(value) {
+    const node = new SinglyLinkedListNode(value);
+
+    this.add(node);
   }
 
   contains(value) {
@@ -94,7 +104,7 @@ export default class SinglyLinkedList {
    * Gets the last value of the list.
    */
   getLast() {
-    return this.get(this.#size - 1);
+    return this.#tail ? this.#tail.value : null;
   }
 
   /**
