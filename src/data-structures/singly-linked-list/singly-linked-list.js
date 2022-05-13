@@ -70,7 +70,7 @@ export default class SinglyLinkedList {
   /**
    * get()
    * -----
-   * Gets a value using the passed in index. If no index is passed into as a paramenter the first element will be selected.
+   * Gets a value using the passed in index. If no index is passed into as a parameter the first element will be selected.
    *
    * @param {index} number - the index that will be used to select an element.
    */
@@ -91,7 +91,7 @@ export default class SinglyLinkedList {
 
   /**
    * getFirst()
-   * -----
+   * ----------
    * Gets the first value of the list.
    */
   getFirst() {
@@ -100,7 +100,7 @@ export default class SinglyLinkedList {
 
   /**
    * getLast()
-   * -----
+   * ---------
    * Gets the last value of the list.
    */
   getLast() {
@@ -109,7 +109,7 @@ export default class SinglyLinkedList {
 
   /**
    * size()
-   * ----------
+   * ------
    * Returns the size of the singly linked list.
    *
    * @return {number} - the size of the singly linked list.
