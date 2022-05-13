@@ -95,7 +95,7 @@ export default class SinglyLinkedList {
    * Gets the first value of the list.
    */
   getFirst() {
-    return this.get();
+    return this.#head?.value ?? null;
   }
 
   /**
@@ -104,7 +104,7 @@ export default class SinglyLinkedList {
    * Gets the last value of the list.
    */
   getLast() {
-    return this.#tail ? this.#tail.value : null;
+    return this.#tail?.value ?? null;
   }
 
   /**
