@@ -46,21 +46,6 @@ export default class SinglyLinkedList {
     }
   }
 
-  /**
-   * addToEnd()
-   * ----------
-   * Adds a node to the end of the singly linked list. Alias for add() method.
-   *
-   * @alias (add)
-   *
-   * @param {value} any - any value to be appended to the end of the singly linked list.
-   */
-  addToEnd(value) {
-    const node = new SinglyLinkedListNode(value);
-
-    this.add(node);
-  }
-
   contains(value) {
     let currentNode = this.#list;
 
