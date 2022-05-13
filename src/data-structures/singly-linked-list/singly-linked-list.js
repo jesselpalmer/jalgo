@@ -32,8 +32,8 @@ export default class SinglyLinkedList {
     if (!this.#list) {
       this.#list = node;
       this.#size++;
-      this.#head = null;
-      this.#tail = null;
+      this.#head = node;
+      this.#tail = node;
     } else {
       let currentNode = this.#list;
 
