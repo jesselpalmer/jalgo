@@ -9,7 +9,6 @@ import SinglyLinkedListNode from './singly-linked-list-node';
  *    parent. All other nodes will be added to the parent as children.
  */
 export default class SinglyLinkedList {
-  #list = null;
   #size = 0;
   #head = null;
   #tail = null;
@@ -29,8 +28,7 @@ export default class SinglyLinkedList {
   add(value) {
     const node = new SinglyLinkedListNode(value);
 
-    if (!this.#list) {
-      this.#list = node;
+    if (!this.#head) {
       this.#size++;
       this.#head = node;
       this.#tail = node;
@@ -56,8 +54,14 @@ export default class SinglyLinkedList {
     this.add(node);
   }
 
+  addToFront(value) {
+    const node = new SinglyLinkedListNode(value);
+    node.next = this.#head;
+    this.#head = node;
+  }
+
   contains(value) {
-    let currentNode = this.#list;
+    let currentNode = this.#head;
 
     while (currentNode) {
       if (currentNode.value === value) return true;
@@ -75,10 +79,10 @@ export default class SinglyLinkedList {
    * @param {index} number - the index that will be used to select an element.
    */
   get(index = 0) {
-    if (!this.#list) return null;
+    if (!this.#head) return null;
     if (index > this.#size) return null;
 
-    let currentNode = this.#list;
+    let currentNode = this.#head;
     let currentIndex = 0;
 
     while (currentIndex !== index) {
@@ -124,7 +128,6 @@ export default class SinglyLinkedList {
    * Clears out the singly linked list.
    */
   clear() {
-    this.#list = null;
     this.#head = null;
     this.#tail = null;
     this.#size = 0;
@@ -136,9 +139,9 @@ export default class SinglyLinkedList {
    * Print out the contents of the singly linked list to the console. Good to use for debugging.
    */
   toString() {
-    if (!this.#list) return;
+    if (!this.#head) return;
 
-    let currentNode = this.#list;
+    let currentNode = this.#head;
 
     while (currentNode.next !== null) {
       console.log(currentNode);

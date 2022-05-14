@@ -14,6 +14,19 @@ describe('Singly Linked List tests', () => {
     });
   });
 
+  describe('addToFront() tests', () => {
+    it('should add a new element to the front of the linked list', () => {
+      const singlyLinkedList = new SinglyLinkedList();
+
+      singlyLinkedList.add(1917);
+      singlyLinkedList.addToFront(false);
+      singlyLinkedList.addToFront(true);
+      singlyLinkedList.add(1989);
+
+      expect(singlyLinkedList.get()).to.be.equal(true);
+    });
+  });
+
   describe('clear() tests', () => {
     it('should clear the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList();
@@ -135,3 +148,11 @@ describe('Singly Linked List tests', () => {
     });
   });
 });
+
+const singlyLinkedList = new SinglyLinkedList();
+
+singlyLinkedList.add(1917);
+singlyLinkedList.addToFront(false);
+singlyLinkedList.addToFront(true);
+singlyLinkedList.add(1989);
+console.log(singlyLinkedList.toString());
