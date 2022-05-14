@@ -148,11 +148,3 @@ describe('Singly Linked List tests', () => {
     });
   });
 });
-
-const singlyLinkedList = new SinglyLinkedList();
-
-singlyLinkedList.add(1917);
-singlyLinkedList.addToFront(false);
-singlyLinkedList.addToFront(true);
-singlyLinkedList.add(1989);
-console.log(singlyLinkedList.toString());
