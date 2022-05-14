@@ -92,7 +92,7 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.get()).to.be.equal(1999);
     });
 
-    it('should return null if there are no nodes in the singly linked list', () => {
+    it('should return null no nodes are in list', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       expect(singlyLinkedList.get()).to.be.equal(null);
