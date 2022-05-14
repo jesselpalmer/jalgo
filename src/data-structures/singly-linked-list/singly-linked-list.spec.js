@@ -72,7 +72,7 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.get(0)).to.be.equal(1999);
     });
 
-    it('should return null if the index is larger that the size of the list', () => {
+    it('should return null if index is larger than the list size', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
