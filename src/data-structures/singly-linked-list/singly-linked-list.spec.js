@@ -82,7 +82,7 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.get(4)).to.be.equal(null);
     });
 
-    it('should retun the first value if no index is passed in', () => {
+    it('should return the first value if no index is passed in', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
