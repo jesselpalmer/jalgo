@@ -66,7 +66,7 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'golden gate'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.get(0)).to.be.equal(1999);
@@ -76,7 +76,7 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'mission'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.get(4)).to.be.equal(null);
@@ -86,7 +86,7 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'california'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.get()).to.be.equal(1999);
@@ -104,7 +104,7 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'alameda'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.getFirst()).to.be.equal(1999);
@@ -121,7 +121,7 @@ describe('Singly Linked List tests', () => {
     it('should get last value', () => {
       const singlyLinkedList = new SinglyLinkedList();
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'san francisco'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.getLast()).to.be.equal(true);
