@@ -23,6 +23,7 @@ describe('Bag tests', () => {
       bag.add(true);
       bag.add('test');
       bag.add(2022);
+
       expect(bag.count(2022)).to.be.equal(2);
     });
 
