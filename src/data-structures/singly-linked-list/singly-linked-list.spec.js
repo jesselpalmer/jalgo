@@ -127,7 +127,7 @@ describe('Singly Linked List tests', () => {
       expect(singlyLinkedList.getLast()).to.be.equal(true);
     });
 
-    it('should return null if there are no nodes in the singly linked list', () => {
+    it('should return null when no nodes in the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       expect(singlyLinkedList.getLast()).to.be.equal(null);
