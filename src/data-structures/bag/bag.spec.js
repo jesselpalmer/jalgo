@@ -18,12 +18,12 @@ describe('Bag tests', () => {
     it('should return a count of 2', () => {
       const bag = new Bag();
 
-      bag.add(1917);
+      bag.add(2022);
       bag.add(true);
       bag.add(true);
       bag.add('test');
-      bag.add(1917);
-      expect(bag.count(1917)).to.be.equal(2);
+      bag.add(2022);
+      expect(bag.count(2022)).to.be.equal(2);
     });
 
     it('should return 0 if nothing has been added', () => {

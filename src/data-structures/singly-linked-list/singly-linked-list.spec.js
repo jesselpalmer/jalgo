@@ -14,6 +14,19 @@ describe('Singly Linked List tests', () => {
     });
   });
 
+  describe('addToFront() tests', () => {
+    it('should add a new element to the front of the linked list', () => {
+      const singlyLinkedList = new SinglyLinkedList();
+
+      singlyLinkedList.add(1917);
+      singlyLinkedList.addToFront(false);
+      singlyLinkedList.addToFront(true);
+      singlyLinkedList.add(1989);
+
+      expect(singlyLinkedList.get()).to.be.equal(true);
+    });
+  });
+
   describe('clear() tests', () => {
     it('should clear the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList();
@@ -53,33 +66,33 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'golden gate'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.get(0)).to.be.equal(1999);
     });
 
-    it('should return null if the index is larger that the size of the list', () => {
+    it('should return null if index is larger than the list size', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'mission'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.get(4)).to.be.equal(null);
     });
 
-    it('should retun the first value if no index is passed in', () => {
+    it('should return the first value if no index is passed in', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'california'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.get()).to.be.equal(1999);
     });
 
-    it('should return null if there are no nodes in the singly linked list', () => {
+    it('should return null no nodes are in list', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       expect(singlyLinkedList.get()).to.be.equal(null);
@@ -91,13 +104,13 @@ describe('Singly Linked List tests', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'alameda'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.getFirst()).to.be.equal(1999);
     });
 
-    it('should return null if there are no nodes in the singly linked list', () => {
+    it('should return null if there are no nodes are in list', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       expect(singlyLinkedList.getFirst()).to.be.equal(null);
@@ -108,13 +121,13 @@ describe('Singly Linked List tests', () => {
     it('should get last value', () => {
       const singlyLinkedList = new SinglyLinkedList();
       singlyLinkedList.add(1999);
-      singlyLinkedList.add({place: 'mineravas den'});
+      singlyLinkedList.add({place: 'san francisco'});
       singlyLinkedList.add(true);
 
       expect(singlyLinkedList.getLast()).to.be.equal(true);
     });
 
-    it('should return null if there are no nodes in the singly linked list', () => {
+    it('should return null when no nodes in the singly linked list', () => {
       const singlyLinkedList = new SinglyLinkedList();
 
       expect(singlyLinkedList.getLast()).to.be.equal(null);
