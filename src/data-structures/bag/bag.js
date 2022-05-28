@@ -15,7 +15,7 @@ export default class Bag {
   }
 
   contains(element) {
-    return this.#elements.contains(element);
+    return element in this.#counts;
   }
 
   count(element) {
