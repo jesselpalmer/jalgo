@@ -8,7 +8,7 @@ export default class Bag {
     this.#elements.add(element);
 
     if (this.#counts[element]) {
-      this.#counts[element] += 1;
+      this.#counts[element]++;
     } else {
       this.#counts[element] = 1;
     }
