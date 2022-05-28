@@ -4,54 +4,74 @@ import SinglyLinkedListNode from './singly-linked-list-node';
  * Singly Linked List
  * ------------------
  * Implementation of a single linked list.
- *
- * @property {SinglyLinkedListNode} list - the list starts of as null. The first added singly list node will become the
- *    parent. All other nodes will be added to the parent as children.
  */
 export default class SinglyLinkedList {
   #size = 0;
   #head = null;
   #tail = null;
 
+  createNewList(value) {
+    const node = new SinglyLinkedListNode(value);
+
+    this.#size++;
+    this.#head = node;
+    this.#tail = node;
+  }
+
   /**
    * add()
    * -----
    * Adds a node to the end of the singly linked list.
    *
+   * Worst-case performance:        O(1)
+   * Best-case performance:         O(1)
+   * Average performance:           O(1)
+   * Worst-case space complexity:   O(1)
+   *
    * @alias (addToEnd)
    *
-   * @param {value} any - any value to be appended to the end of the singly
-   * linked list.
+   * @param {value} any - any value to be appended to the end of the
+   * singly linked list.
    *
    * @return none
    */
   add(value) {
-    const node = new SinglyLinkedListNode(value);
+    const isListEmpty = !this.#head;
 
-    if (!this.#head) {
-      this.#size++;
-      this.#head = node;
-      this.#tail = node;
+    if (isListEmpty) {
+      this.createNewList(value);
     } else {
-      this.#tail.next = node;
-      this.#tail = node;
-      this.#size++;
+      this.addToEnd(value);
     }
   }
 
   /**
    * addToEnd()
    * ----------
-   * Adds a node to the end of the singly linked list. Alias for add() method.
+   * Adds a node to the end of the singly linked list.
    *
-   * @alias (add)
+   * Worst-case performance:        O(1)
+   * Best-case performance:         O(1)
+   * Average performance:           O(1)
+   * Worst-case space complexity:   O(1)
    *
-   * @param {value} any - any value to be appended to the end of the singly linked list.
+   *
+   * @param {value} any - any value to be appended to the end of the
+   * singly linked list.
+   *
+   * @return none
    */
   addToEnd(value) {
     const node = new SinglyLinkedListNode(value);
+    const isListEmpty = !this.#head;
 
-    this.add(node);
+    if (isListEmpty) {
+      this.createNewList(value);
+    } else {
+      this.#tail.next = node;
+      this.#tail = node;
+      this.#size++;
+    }
   }
 
   addToFront(value) {
