@@ -17,13 +17,13 @@ The only data structure that is available right now is `Stack`. Avaiable methods
   
   ```javascript
   // es5
-  const Stack = require('cs.js')
+  const Stack = require('cs.js');
 
   // es6
-  import Stack from 'cs.js'
+  import Stack from 'cs.js';
 
-  const stack = new Stack()
-  stack.isEmpty() // will return true
+  const stack = new Stack();
+  stack.isEmpty(); // will return true
   ```
 
 ## Tests
