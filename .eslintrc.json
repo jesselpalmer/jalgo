@@ -8,16 +8,12 @@
   "extends": [
     "eslint:recommended", "google"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "rules": {
-    "require-jsdoc" : 0,
-    "space-before-function-paren": ["error", "never"]
-  }
+    "require-jsdoc" : 0
+  },
+  "ignorePatterns": ["lib", "test"]
 }
