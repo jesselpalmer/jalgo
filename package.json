@@ -4,16 +4,15 @@
   "description": "CS algorithms and data structures in JavaScript",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel ./src -d lib",
-    "build:watch": "./node_modules/.bin/babel ./src -w --out-dir lib",
-    "coverage": "codecov",
+    "build": "./node_modules/.bin/babel ./src --out-dir lib",
+    "build:watch": "./node_modules/.bin/babel ./src --watch --out-dir lib",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint --fix ./src",
-    "test": "./node_modules/.bin/nyc --reporter=lcov ./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
-    "test:unit": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register",
-    "test:unit:watch": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './src/**/*.spec.js' -w --require @babel/register",
-    "test:unit:lib": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './test/lib.spec.js' --require @babel/register",
-    "test:unit:lib:watch": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './test/lib.spec.js' -w --require @babel/register"
+    "test": "./node_modules/.bin/jest",
+    "test:unit": "./node_modules/.bin/jest",
+    "test:unit:watch": "./node_modules/.bin/jest --watchAll",
+    "test:unit:lib": "./node_modules/.bin/jest './test/lib.spec.js'",
+    "test:unit:lib:watch": "./node_modules/.bin/jest './test/lib.spec.js' --watchAll"
   },
   "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
@@ -26,7 +25,7 @@
     "Computer Science",
     "Data Structures"
   ],
-  "author": "Jesse Palmer <jesselpalmer@gmail.com> (http://jesselpalmer.com/)",
+  "author": "Jesse Palmer <jesselpalmer@gmail.com> (https://jesselpalmer.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jesselpalmer/cs.js/issues"
@@ -37,14 +36,11 @@
     "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.9.0",
-    "@babel/register": "^7.9.0",
     "chai": "^4.2.0",
-    "codecov": "^3.6.5",
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
-    "jsdoc": "^3.6.2",
-    "mocha": "^10.0.0",
-    "nyc": "^15.0.1"
+    "jest": "^28.1.0",
+    "jsdoc": "^3.6.2"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
