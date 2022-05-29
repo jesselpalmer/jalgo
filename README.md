@@ -3,7 +3,7 @@
 
 # cs.js
 
-CS algorithms and data structures in JavaScript
+Algorithms and data structures in JavaScript
 
 ## Installation
   
