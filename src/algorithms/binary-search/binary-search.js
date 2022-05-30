@@ -9,7 +9,7 @@
  * Average performance:           O(log n)
  * Worst-case space complexity:   O(1)
  *
- * @param {array<values>} valuesArray - a sorted array of values
+ * @param {number[]} valuesArray - a sorted array of values
  * @param {string | number} value - the value that is being search for in the valuesArray.
  *
  * @return {number} - the index if the value is found or -1 if the value is not found

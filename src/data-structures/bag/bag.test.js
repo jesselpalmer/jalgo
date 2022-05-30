@@ -1,21 +1,18 @@
-/* eslint-env mocha */
-
 import Bag from './bag';
-import {expect} from 'chai';
 
 describe('Bag tests', () => {
   describe('add() tests', () => {
-    it('should add one new element', () => {
+    test('should add one new element', () => {
       const bag = new Bag();
 
       bag.add(1917);
 
-      expect(bag.size()).to.be.equal(1);
+      expect(bag.size()).toBe(1);
     });
   });
 
   describe('count() tests', () => {
-    it('should return a count of 2', () => {
+    test('should return a count of 2', () => {
       const bag = new Bag();
 
       bag.add(2022);
@@ -24,13 +21,13 @@ describe('Bag tests', () => {
       bag.add('test');
       bag.add(2022);
 
-      expect(bag.count(2022)).to.be.equal(2);
+      expect(bag.count(2022)).toBe(2);
     });
 
-    it('should return 0 if nothing has been added', () => {
+    test('should return 0 if nothing has been added', () => {
       const bag = new Bag();
 
-      expect(bag.count()).to.be.equal(0);
+      expect(bag.count()).toBe(0);
     });
   });
 });
