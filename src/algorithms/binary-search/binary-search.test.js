@@ -11,7 +11,7 @@ describe('Binary Search tests', () => {
     expect(binarySearch(testArray, 'google')).toBe(2);
   });
 
-  test('should return index if the array contains numbers and strings and the element exists', () => {
+  test('should return index if the element exists', () => {
     const testArray = [-42324, 213123, 'amazon', 'uber'];
     expect(binarySearch(testArray, 'amazon')).toBe(2);
   });

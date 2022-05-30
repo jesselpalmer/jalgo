@@ -1,7 +1,7 @@
 import linearSearch from './linear-search';
 
 describe('Linear Search tests', () => {
-  test('should return the correct index of the element if it is contained in the list', () => {
+  test('should return the correct index of the element', () => {
     const list = [-121, 0, 1, 2, 3, 4, 5, 1000, 9999];
     const element = 3;
 

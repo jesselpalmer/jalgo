@@ -14,6 +14,6 @@ describe('Euclidean Algorithm tests', () => {
   });
 
   test('should return -1 if no parameters are passed in', () => {
-    expect(euclideanAlgorithm()).toBe(-1);
+    expect(euclideanAlgorithm()).to.be.equal(-1);
   });
 });
