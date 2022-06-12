@@ -11,8 +11,8 @@
     "test": "./node_modules/.bin/jest",
     "test:unit": "./node_modules/.bin/jest",
     "test:unit:watch": "./node_modules/.bin/jest --watchAll",
-    "test:unit:lib": "./node_modules/.bin/jest './test/lib.spec.js'",
-    "test:unit:lib:watch": "./node_modules/.bin/jest './test/lib.spec.js' --watchAll"
+    "test:unit:lib": "./node_modules/.bin/jest 'test/lib.test.js'",
+    "test:unit:lib:watch": "./node_modules/.bin/jest 'test/lib.test.js' --watchAll"
   },
   "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
@@ -42,5 +42,9 @@
     "jest": "^28.1.0",
     "jsdoc": "^3.6.2"
   },
-  "private": false
+  "private": false,
+  "funding": {
+    "type" : "github",
+    "url" : "https://github.com/sponsors/jesselpalmer"
+  }
 }
