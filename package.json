@@ -4,16 +4,18 @@
   "description": "Algorithms and data structures in JavaScript",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "npm run clean && ./node_modules/.bin/babel ./src --out-dir lib",
-    "build:watch": "./node_modules/.bin/babel ./src --watch --out-dir lib",
-    "clean": "rm -rf lib",
+    "build": "npm run clean && ./node_modules/.bin/babel ./src --out-dir ./lib",
+    "build:watch": "./node_modules/.bin/babel ./src --watch --out-dir ./lib",
+    "clean": "rm -rf ./lib",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint --fix ./src",
     "test": "./node_modules/.bin/jest",
     "test:unit": "./node_modules/.bin/jest",
     "test:unit:watch": "./node_modules/.bin/jest --watchAll",
-    "test:unit:lib": "./node_modules/.bin/jest 'test/lib.test.js'",
-    "test:unit:lib:watch": "./node_modules/.bin/jest 'test/lib.test.js' --watchAll"
+    "test:unit:lib": "./node_modules/.bin/jest './test/lib.test.js'",
+    "test:unit:lib:watch": "./node_modules/.bin/jest './test/lib.test.js' --watchAll",
+    "test:unit:src": "./node_modules/.bin/jest './src'",
+    "test:unit:src:watch": "./node_modules/.bin/jest './src' --watchAll"
   },
   "repository": "https://github.com/jesselpalmer/cs.js",
   "engines": {
