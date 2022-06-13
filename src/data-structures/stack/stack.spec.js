@@ -20,14 +20,15 @@ describe('Stack tests', () => {
     });
 
     test('should return false if not empty', () => {
-      const testArray = [1, 2, 3];
-      const stack = new Stack(testArray);
+      const stack = new Stack();
+      stack.push(1);
+      stack.push(2);
+      stack.push(3);
       expect(stack.isEmpty()).toBe(false);
     });
 
     test('should return true if empty array is passed to it', () => {
-      const testArray = [];
-      const stack = new Stack(testArray);
+      const stack = new Stack();
       expect(stack.isEmpty()).toBe(true);
     });
   });
@@ -44,7 +45,7 @@ describe('Stack tests', () => {
       stack.push('babbage');
       stack.push('hopper');
       stack.push('knuth');
-      expect(stack.peek()).toBe('babbage');
+      expect(stack.peek()).toBe('knuth');
     });
   });
 
@@ -54,7 +55,7 @@ describe('Stack tests', () => {
       stack.push('babbage');
       stack.push('hopper');
       stack.push('knuth');
-      expect(stack.pop()).toBe('babbage');
+      expect(stack.pop()).toBe('knuth');
     });
 
     test('should remove first element', () => {
@@ -63,7 +64,7 @@ describe('Stack tests', () => {
       stack.push('hopper');
       stack.pop();
       stack.push('knuth');
-      expect(stack.peek()).toBe('hopper');
+      expect(stack.peek()).toBe('knuth');
     });
 
     test('should had the correct size', () => {
@@ -89,7 +90,7 @@ describe('Stack tests', () => {
       const stack = new Stack();
       stack.push(1906);
       stack.push(1815);
-      expect(stack.search(1815)).toBe(1);
+      expect(stack.search(1906)).toBe(1);
     });
 
     test('should return -1 if an index can not be found', () => {
@@ -112,12 +113,12 @@ describe('Stack tests', () => {
       expect(stack.toString()).toBe('1');
     });
 
-    test('should return correct string when there are multiple elements', () => {
+    test('should return correct string with multiple elements', () => {
       const stack = new Stack();
       stack.push(1);
       stack.push(2);
       stack.push(3);
-      expect(stack.toString()).toBe('1,2,3');
+      expect(stack.toString()).toBe('3,2,1');
     });
   });
 });

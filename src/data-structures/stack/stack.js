@@ -1,37 +1,37 @@
+import {SinglyLinkedList} from '../../../lib/data-structures';
+
 export default class Stack {
-  constructor(elements = []) {
-    this._elements = elements;
-  }
+  #elements = new SinglyLinkedList();
 
   clear() {
-    this._elements = [];
+    this.#elements = new SinglyLinkedList();
   }
 
   isEmpty() {
-    return this._elements.length === 0;
+    return this.#elements.isEmpty();
   }
 
   peek() {
-    return this._elements[0];
+    return this.#elements.getFirst();
   }
 
   pop() {
-    return this._elements.splice(0, 1)[0];
+    return this.#elements.removeFirst();
   }
 
   push(element) {
-    this._elements.push(element);
-  }
-
-  size() {
-    return this._elements.length;
+    this.#elements.addToFront(element);
   }
 
   search(element) {
-    return this._elements.indexOf(element);
+    return this.#elements.indexOf(element);
+  }
+
+  size() {
+    return this.#elements.size();
   }
 
   toString() {
-    return this._elements.toString();
+    return this.#elements.toString();
   }
 }

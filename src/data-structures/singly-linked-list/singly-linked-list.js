@@ -10,7 +10,7 @@ export default class SinglyLinkedList {
   #head = null;
   #tail = null;
 
-  createNewList(value) {
+  #createNewList(value) {
     const node = new SinglyLinkedListNode(value);
 
     this.#size++;
@@ -36,10 +36,8 @@ export default class SinglyLinkedList {
    * @return none
    */
   add(value) {
-    const isListEmpty = !this.#head;
-
-    if (isListEmpty) {
-      this.createNewList(value);
+    if (this.isEmpty()) {
+      this.#createNewList(value);
     } else {
       this.addToEnd(value);
     }
@@ -63,10 +61,9 @@ export default class SinglyLinkedList {
    */
   addToEnd(value) {
     const node = new SinglyLinkedListNode(value);
-    const isListEmpty = !this.#head;
 
-    if (isListEmpty) {
-      this.createNewList(value);
+    if (this.isEmpty()) {
+      this.#createNewList(value);
     } else {
       this.#tail.next = node;
       this.#tail = node;
@@ -78,6 +75,18 @@ export default class SinglyLinkedList {
     const node = new SinglyLinkedListNode(value);
     node.next = this.#head;
     this.#head = node;
+    this.#size++;
+  }
+
+  /**
+   * clear()
+   * -------
+   * Clears out the singly linked list.
+   */
+  clear() {
+    this.#head = null;
+    this.#tail = null;
+    this.#size = 0;
   }
 
   contains(value) {
@@ -94,12 +103,13 @@ export default class SinglyLinkedList {
   /**
    * get()
    * -----
-   * Gets a value using the passed in index. If no index is passed into as a parameter the first element will be selected.
+   * Gets a value using the passed in index. If no index is passed into as a
+   * parameter the first element will be selected.
    *
    * @param {index} number - the index that will be used to select an element.
    */
   get(index = 0) {
-    if (!this.#head) return null;
+    if (this.isEmpty()) return null;
     if (index > this.#size) return null;
 
     let currentNode = this.#head;
@@ -131,6 +141,31 @@ export default class SinglyLinkedList {
     return this.#tail?.value ?? null;
   }
 
+  indexOf(value) {
+    let currentNode = this.#head;
+    let currentIndex = 0;
+
+    while (currentNode) {
+      if (currentNode.value === value) return currentIndex;
+      currentNode = currentNode.next;
+      currentIndex++;
+    }
+
+    return -1;
+  }
+
+  isEmpty() {
+    return this.#size === 0;
+  }
+
+  removeFirst() {
+    const currentNode = this.#head;
+    this.#head = currentNode.next;
+    this.#size--;
+
+    return currentNode.value;
+  }
+
   /**
    * size()
    * ------
@@ -143,32 +178,20 @@ export default class SinglyLinkedList {
   }
 
   /**
-   * clear()
-   * -------
-   * Clears out the singly linked list.
-   */
-  clear() {
-    this.#head = null;
-    this.#tail = null;
-    this.#size = 0;
-  }
-
-  /**
    * toString()
    * ----------
-   * Print out the contents of the singly linked list to the console. Good to use for debugging.
+   * Print out the contents of the singly linked list to the console. Good to
+   * use for debugging.
    */
   toString() {
-    if (!this.#head) return;
-
+    const array = [];
     let currentNode = this.#head;
 
-    while (currentNode.next !== null) {
-      console.log(currentNode);
-      console.log('\n');
+    while (currentNode !== null) {
+      array.push(currentNode.value);
       currentNode = currentNode.next;
     }
 
-    console.log(currentNode);
+    return array.toString();
   }
 }
