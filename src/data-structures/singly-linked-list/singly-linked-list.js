@@ -1,6 +1,4 @@
 import SinglyLinkedListNode from './singly-linked-list-node';
-import {re} from '@babel/core/lib/vendor/import-meta-resolve';
-/* eslint-disable valid-jsdoc */
 
 /**
  * Singly Linked List
