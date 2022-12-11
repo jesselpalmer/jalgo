@@ -1,9 +1,9 @@
-![cs.js action](https://github.com/jesselpalmer/cs.js/workflows/cs.js%20action/badge.svg)
-[![codecov](https://codecov.io/gh/jesselpalmer/cs.js/branch/master/graph/badge.svg)](https://codecov.io/gh/jesselpalmer/cs.js)
+![jalgo action](https://github.com/jesselpalmer/jalgo/workflows/jalgo%20action/badge.svg)
+[![codecov](https://codecov.io/gh/jesselpalmer/jalgo/branch/master/graph/badge.svg)](https://codecov.io/gh/jesselpalmer/jalgo)
 
-# cs.js
+# jalgo
 
-Algorithms and data structures in JavaScript
+Algorithms in JavaScript
 
 ## Installation
   
