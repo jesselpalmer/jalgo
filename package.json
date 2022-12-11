@@ -1,7 +1,7 @@
 {
   "name": "jadt",
   "version": "0.0.2",
-  "description": "JavaScript Abstract Data Types",
+  "description": "JavaScript Algorithms",
   "main": "./lib/index.js",
   "scripts": {
     "build": "npm run clean && ./node_modules/.bin/babel ./src --out-dir ./lib",
@@ -17,7 +17,7 @@
     "test:unit:src": "./node_modules/.bin/jest './src'",
     "test:unit:src:watch": "./node_modules/.bin/jest './src' --watchAll"
   },
-  "repository": "https://github.com/jesselpalmer/cs.js",
+  "repository": "https://github.com/jesselpalmer/jalgo",
   "engines": {
     "node": ">=4.2.4"
   },
@@ -25,15 +25,14 @@
     "Algorithms",
     "CS",
     "CS Algoorithms",
-    "Computer Science",
-    "Data Structures"
+    "Computer Science"
   ],
   "author": "Jesse Palmer <jesselpalmer@gmail.com> (https://jesselpalmer.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jesselpalmer/cs.js/issues"
+    "url": "https://github.com/jesselpalmer/jalgo/issues"
   },
-  "homepage": "https://github.com/jesselpalmer/cs.js#readme",
+  "homepage": "https://github.com/jesselpalmer/jalgo#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.17.10",
