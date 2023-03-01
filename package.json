@@ -35,7 +35,7 @@
   "homepage": "https://github.com/jesselpalmer/jalgo#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.9.0",
     "chai": "^4.2.0",
